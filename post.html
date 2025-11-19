@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>প্রজ্ঞা</title>
+  <link rel="stylesheet" href="libraries/swiperjs/swiper.css" />
+  <link rel="stylesheet" href="main.css">
+  
+  <style type="text/css" media="all">
+    .postBox {
+      
+      width: 100%%;
+      height: calc(100vh - 80px);
+      display: grid;
+      
+      grid-template-rows: 30px 60px 30px 60px 30px auto 30px 100px;
+    }
+    
+    .postBox div:nth-child(odd) {
+      
+      display: grid;
+      place-items: center start;
+      
+      padding-left: 10px;
+      
+    }
+    
+    .categoryY,
+    .topicY {
+      background: #fafafa;
+      border: 2px solid #E5E5E5;
+      height: 40px;
+      margin: 10px;
+      display: grid;
+      grid-template-columns: auto 40px;
+      
+      border-radius: 30px;
+      
+      
+      
+    }
+    
+    
+    .categoryYa,
+    .topicYq {
+      display: grid;
+      place-items: center start;
+    }
+    
+    .categoryYb,
+    .topicYb {
+      display: grid;
+      place-items: center;
+    }
+    
+    
+    
+    
+    
+    .class {
+      position: fixed;
+      width: 300px;
+      transition: 0.7s all ease;
+      font-size: 15px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, 100%);
+      background: #fafafa;
+      border: 2px solid #E5E5E5;
+      border-radius: 30px;
+    }
+    
+    .class .item {
+      height: 40px;
+      display: grid;
+      place-items: center;
+    }
+    
+    .class .divider {
+      background: #E5E5E5;
+      height: 2px;
+      
+    }
+    
+    
+    
+    
+    
+    
+    #ifrm {
+      position: fixed;
+      width: 90vw;
+      left: 50%;
+      transform: translate(-50%, 100%);
+      height: 95vh;
+      z-index: 9999;
+      bottom: 0;
+      transition: all 0.5s ease;
+      
+      border-top: 2px solid #E5E5E5;
+      border-left: 2px solid #E5E5E5;
+      border-right: 2px solid #E5E5E5;
+      border-radius: 30px 30px 0px 0px;
+    }
+  </style>
+</head>
+
+<body>
+  
+  
+  
+  
+  
+  <div class="header x4">
+    <div class="img-container">
+      <div class="inner-img-container">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="scale:1.5;"><!--Boxicons v3.0 https://boxicons.com | License  https://docs.boxicons.com/free-->
+          <path d="M14.29 6.29 8.59 12l5.7 5.71 1.42-1.42-4.3-4.29 4.3-4.29z" />
+        </svg>
+        
+      </div>
+    </div>
+    
+    
+    <div class="title-container">
+      <p>পোস্ট</p>
+    </div>
+    <div class="img-container">
+      <div class="inner-img-container" id="addNotes" style="opacity: 0;;">
+        
+      </div>
+    </div>
+    <div class="img-container">
+      <div class="inner-img-container">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><!--Boxicons v3.0 https://boxicons.com | License  https://docs.boxicons.com/free-->
+          <path d="M13 16V9h4l-5-6-5 6h4v7z" />
+          <path d="M19 19H5v-7H3v7c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-7h-2z" />
+        </svg>
+        
+      </div>
+    </div>
+    
+  </div>
+  
+  <div style="width: 10px;height: 80px;"></div>
+  
+  <div class="postBox">
+    
+    <div class="categoryX">তোমার পোস্টটি কি সম্পর্কিত?
+      
+      
+      
+    </div>
+    <div class="categoryY" id="genreWrapper">
+      <div class="categoryYa" id="genre">পোস্টের বিষয়বস্তু</div>
+      <div class="categoryYb">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><!--Boxicons v3.0 https://boxicons.com | License  https://docs.boxicons.com/free-->
+          <path d="m12 15.41 5.71-5.7-1.42-1.42-4.29 4.3-4.29-4.3-1.42 1.42z" />
+        </svg>
+      </div>
+      
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="topicX">তোমার পোস্টটি কোন টপিকের?
+      
+      
+      
+    </div>
+    <div class="topicY" id="topicTrigger">
+      <div class="topicYa">পোস্টের টপিক</div>
+      <div class="topicYb">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><!--Boxicons v3.0 https://boxicons.com | License  https://docs.boxicons.com/free-->
+          <path d="m12 15.41 5.71-5.7-1.42-1.42-4.29 4.3-4.29-4.3-1.42 1.42z" />
+        </svg>
+      </div>
+      
+      
+      
+    </div>
+    
+    <div class="textX">তোমার পোস্ট</div>
+    <div class="textY"></div>
+    
+    <div class="imgsX">ছবি যুক্ত করবে না?</div>
+    <div class="imgsY"></div>
+    
+    
+    
+    
+  </div>
+  
+  
+  
+  
+  
+  <div class="class" id="class">
+    
+    
+    <div class="item">
+      ডাউট
+    </div>
+    
+    <div class="divider"></div>
+    <div class="item">
+      সাধারণ
+    </div>
+    
+    <div class="divider"></div>
+    <div class="item">
+      আলোচনা
+    </div>
+    
+    
+    <div class="divider"></div>
+    <div class="item">
+      রিসোর্স
+    </div>
+    
+    
+    
+    <div class="divider"></div>
+    <div class="item">
+      নোটিশ
+    </div>
+    
+    
+    <div class="divider"></div>
+    <div class="item">
+      সফলতার গল্প
+    </div>
+    
+    
+    
+    
+    <div class="divider"></div>
+    <div class="item">
+      সাধারণ পোস্ট
+    </div>
+    
+    
+    
+    <div class="divider"></div>
+    <div class="item">
+      টিপস এন্ড ট্রিকস
+    </div>
+    
+    
+    <div class="divider"></div>
+    <div class="item">
+      রিভিউ
+    </div>
+    
+    
+    
+    <div class="divider"></div>
+    <div class="item">
+      চ্যালেন্জ
+    </div>
+    
+    
+    <div class="divider"></div>
+    <div class="item">
+      ক্যারিয়ার নির্দেশিকা
+    </div>
+    
+    
+    
+    
+    
+  </div>
+  
+  
+  <iframe src="topicSelection.html" frameborder="0" id="ifrm"></iframe>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="libraries/swiperjs/swiper.js"></script>
+  
+  <script src="main.js" type="module"></script>
+  <script src="libraries/supabase/supabase.js" type="module"></script>
+  <script src="backend.js" type="module"></script>
+  <script type="text/javascript" charset="utf-8">
+    const genre = document.getElementById('genre');
+    const items = document.querySelectorAll('.class .item');
+    const cls = document.getElementById('class');
+    
+    
+    
+    const genreWrapper = document.getElementById('genreWrapper');
+    
+    genreWrapper.addEventListener('click', () => {
+      
+      cls.style.transform = "translate(-50%, -50%)";
+    });
+    
+    
+    
+    
+    items.forEach(item => {
+      
+      item.addEventListener('click', () => {
+        genre.innerText = item.innerText;
+        cls.style.transform = "translate(-50%, 100%)";
+      });
+      
+      
+      
+      
+      
+      
+      
+    });
+    
+    
+    
+    
+    
+    
+    const galleryTrigger = document.getElementById("topicTrigger");
+    const ifrm = document.getElementById("ifrm");
+    
+    galleryTrigger.addEventListener("click", function() {
+      
+      ifrm.style.transform = "translate(-50%,0%)";
+      
+    });
+    
+    
+    
+    window.addEventListener("message", (e) => {
+      if (e.data.value == 1) {
+        ifrm.style.transform = "translate(-50%,100%)";
+      }
+    });
+  </script>
+</body>
+
+</html>

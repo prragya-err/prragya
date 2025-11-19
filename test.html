@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>প্রজ্ঞা</title>
+  <link rel="stylesheet" href="libraries/swiperjs/swiper.css" />
+  <link rel="stylesheet" href="main.css">
+
+  <style>
+    .frnds {
+      height: calc(100vh - 80px);
+      display: grid;
+      grid-template-rows: 60px auto;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="header x4">
+    <div class="img-container">
+      <div class="inner-img-container">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="scale:1.5;">
+          <path d="M14.29 6.29 8.59 12l5.7 5.71 1.42-1.42-4.3-4.29 4.3-4.29z" />
+        </svg>
+      </div>
+    </div>
+
+    <div class="title-container">
+      <p>কমিউনিটি</p>
+    </div>
+
+    <div class="img-container">
+      <div class="inner-img-container" id="addNotes">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+          <path d="M20 2H4c-.55 0-1 .45-1 1v2c0 .22.07.43.2.6L9 13.33V21a1 1 0 0 0 1 1c.15 0 .31-.04 .45-.11l4-2A1 1 0 0 0 15 19v-5.67l5.8-7.73c.13-.17 .2-.38 .2-.6V3c0-.55-.45-1-1-1m-1 2.67-5.8 7.73c-.13.17-.2.38-.2.6v5.38l-2 1V13c0-.22-.07-.43-.2-.6L5 4.67V4h14z" />
+        </svg>
+      </div>
+    </div>
+
+    <div class="img-container">
+      <div class="inner-img-container">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+          <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z" />
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <div style="height:80px;"></div>
+
+  <div class="frnds">
+
+    <div class="search" id="search">
+      <p id="searchP">j
+      b
+      hhhj</p>
+    </div>
+
+    <div class="users" id="users"></div>
+
+  </div>
+
+  <script src="libraries/swiperjs/swiper.js"></script>
+  <script src="main.js" type="module"></script>
+  <script src="libraries/supabase/supabase.js" type="module"></script>
+  <script src="backend.js" type="module"></script>
+
+  <!-- MAIN WORKING SCRIPT -->
+  <script type="module">
+
+    import "./backend.js";
+
+    let searchP = document.getElementById("searchP");
+    let usersBox = document.getElementById("users");
+
+    // enable edit
+    searchP.addEventListener("click", () => {
+      searchP.contentEditable = "true";
+      searchP.focus();
+    });
+
+    // disable edit
+    searchP.addEventListener("focusout", () => {
+      searchP.contentEditable = "false";
+    });
+
+    // search when typing
+    searchP.addEventListener("input", async () => {
+
+      
+
+    });
+  </script>
+
+</body>
+
+</html>
