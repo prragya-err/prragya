@@ -204,6 +204,7 @@ background: white;
   display: grid;
   grid-template-columns: 80px auto;
   
+  border-bottom: 2px solid #E5E5E5;
   
 }
 

@@ -9,11 +9,47 @@
   <link rel="stylesheet" href=".css">
   
   <style type="text/css" media="all">
-   .notes{
-     background: red;
+   #notes{
+    
      width:100%;
+     max-height:calc(100vh - 82px);
+     
    }
     
+    
+    #notes img{
+      width:250px;
+      height:250px;
+      display: block;
+      margin: 100px auto;
+      opacity: 0.6;
+      
+      transition:all 0.3s ease;
+    }
+    
+    
+    
+    
+   #notes p{
+    
+     margin: 10px;
+     background: #fafafa;
+     border:2px solid #E5E5E5;
+     border-radius: 20px;
+     opacity: 0;
+     height:0px;
+     display: grid;
+     place-items: center start;
+     padding-left: 10px;
+     transition: all 0.15s ease;
+     overflow: hidden;
+   }
+    
+    
+  #notes p.show{
+    opacity: 1;
+height: 40px;
+  }
 
     
   </style>
@@ -57,14 +93,15 @@
     
   </div>
   
- 
-  <br />
-  <br />
-  <br />
+ <div style="height: 82px;">
+   
+ </div>
   
  
   <div id="notes">
     
+    
+    <img src="/imgs/other/noteLoad.png" alt="" id="loaderImg"/>
    
   </div>
   

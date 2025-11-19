@@ -1,3 +1,7 @@
+function wait(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 function getName() {
   const names = [
     "Sophia", "Jocelyn", "Oliver", "Emery", "Vivian",
@@ -136,20 +140,20 @@ if (sign) {
       
       
       
-              
-              ({ error } = await sb
+      
+      ({ error } = await sb
         .from('socialInfo')
         .insert({
           
-
-          frnds :[],
-          frndReqsSent:[], 
-          frndReqsReceived:[],
+          
+          frnds: [],
+          frndReqsSent: [],
+          frndReqsReceived: [],
           
           
           
         }));
-
+      
       
       window.location.href = "index.html";
       
@@ -201,7 +205,7 @@ profilePic.forEach(picc => {
   
   
   
-  picc.src= profile;
+  picc.src = profile;
   
   
   
@@ -313,7 +317,7 @@ if (addNotes) {
     
     
     
-    loadNotes();
+    loadNotes(0);
     
     
   });
@@ -326,12 +330,11 @@ if (addNotes) {
 }
 
 
-async function loadNotes() {
+async function loadNotes(stateNum) {
   const notes = document.getElementById("notes");
-  notes.innerHTML = "";
+  const loaderImg = document.getElementById("loaderImg");
   
-  
-  
+  let paragraphs = notes.querySelectorAll('p');
   
   
   ({ data, error } = await sb
@@ -341,18 +344,50 @@ async function loadNotes() {
     .order('created_at', { ascending: false }));
   
   
-  
+  if (data) {
+    
+    if (stateNum) {
+      
+      
+      loaderImg.style.opacity = "0";
+      await wait(300);
+      
+    }
+    
+    else {
+      
+      paragraphs.forEach((p, i) => {
+
+        
+        setTimeout(() => {
+          
+          p.classList.remove('show');
+          
+          
+        }, (i + 1) * 150);
+        
+        
+        
+      });
+      
+      await wait(paragraphs.length*150);
+      
+    }
+    
+    notes.innerHTML = "";
+    
+  }
   
   data.forEach(note => {
     
     
-    const noteItem = document.createElement("div");
+    const noteItem = document.createElement("p");
     
     noteItem.textContent = note.note_title;
     
     
     
-    noteItem.addEventListener('click', () => {
+    noteItem.addEventListener('click',  () => {
       
       
       
@@ -366,9 +401,30 @@ async function loadNotes() {
     
     
     
+    
+    
+    
   });
   
   
+  
+  
+  paragraphs = notes.querySelectorAll('p');
+  
+  
+  
+  paragraphs.forEach(async (p, i) => {
+    
+    setTimeout(() => {
+      
+      
+      
+      p.classList.add('show');
+     
+      
+      
+   }, (i + 1) * 150);
+  });
   
   
   
@@ -377,7 +433,7 @@ async function loadNotes() {
 
 if (document.body.dataset.page === "notes") {
   
-  loadNotes();
+  loadNotes(1);
   
   
 } else if (document.body.dataset.page === "noteEdit") {
@@ -609,7 +665,7 @@ async function loadProfile() {
     ({ error } = await sb.storage.from("imgGallery").upload(fileName, file));
     ({ data } = sb.storage.from("imgGallery").getPublicUrl(fileName));
     
-   profileP.src = data.publicUrl;
+    profileP.src = data.publicUrl;
     
     ({ data, error } = await sb
       .from('userInfo')
