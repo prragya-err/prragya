@@ -9,49 +9,78 @@
   <link rel="stylesheet" href=".css">
   
   <style type="text/css" media="all">
-   #notes{
+    #notes {
+      
+      width: 100%;
+      max-height: calc(100vh - 82px);
+      
+    }
     
-     width:100%;
-     max-height:calc(100vh - 82px);
-     
-   }
     
-    
-    #notes img{
-      width:250px;
-      height:250px;
+    #notes img {
+      width: 250px;
+      height: 250px;
       display: block;
-      margin: 100px auto;
+      margin: auto;
+      margin-top:100px;
       opacity: 0.6;
       
-      transition:all 0.3s ease;
+      transition: all 0.3s ease;
     }
     
     
     
     
-   #notes p{
+    #notes p {
+      
+      margin: 10px;
+      background: #fafafa;
+      border: 2px solid #E5E5E5;
+      border-radius: 20px;
+      opacity: 0;
+      height: 0px;
+      display: grid;
+      place-items: center start;
+      padding-left: 10px;
+      transition: all 0.15s ease;
+      overflow: hidden;
+    }
     
-     margin: 10px;
-     background: #fafafa;
-     border:2px solid #E5E5E5;
-     border-radius: 20px;
-     opacity: 0;
-     height:0px;
-     display: grid;
-     place-items: center start;
-     padding-left: 10px;
-     transition: all 0.15s ease;
-     overflow: hidden;
+    
+    #notes p.show {
+      opacity: 1;
+      height: 40px;
+    }
+    
+    .tutorial {
+      opacity: 0.5;
+      margin: 0 auto;
+      width: 80%;
+      display: grid;
+      grid-template-columns: 30px auto;
+      height:30px;
+    }
+    
+   
+    
+    .tutorial div.a{
+      display: grid;
+      place-items:center;
+      
+      
+    }
+    
+   .tutorial div.a svg{
+     fill:black;
    }
     
-    
-  #notes p.show{
-    opacity: 1;
-height: 40px;
-  }
-
-    
+       
+    .tutorial div.b{
+      display: grid;
+      place-items:center start;
+    color:black;
+      
+    }
   </style>
 </head>
 
@@ -79,7 +108,11 @@ height: 40px;
     </div>
     <div class="img-container">
       <div class="inner-img-container" id="addNotes">
-       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><!--Boxicons v3.0 https://boxicons.com | License  https://docs.boxicons.com/free--><path d="M13 10h-2v3H8v2h3v3h2v-3h3v-2h-3z"/><path d="m19.94 7.68-.03-.09a.8.8 0 0 0-.2-.29l-5-5c-.09-.09-.19-.15-.29-.2l-.09-.03a.8.8 0 0 0-.26-.05c-.02 0-.04-.01-.06-.01H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-12s-.01-.04-.01-.06c0-.09-.02-.17-.05-.26ZM6 20V4h7v4c0 .55.45 1 1 1h4v11z"/></svg> 
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><!--Boxicons v3.0 https://boxicons.com | License  https://docs.boxicons.com/free-->
+          <path d="M13 10h-2v3H8v2h3v3h2v-3h3v-2h-3z" />
+          <path d="m19.94 7.68-.03-.09a.8.8 0 0 0-.2-.29l-5-5c-.09-.09-.19-.15-.29-.2l-.09-.03a.8.8 0 0 0-.26-.05c-.02 0-.04-.01-.06-.01H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-12s-.01-.04-.01-.06c0-.09-.02-.17-.05-.26ZM6 20V4h7v4c0 .55.45 1 1 1h4v11z" />
+        </svg>
+        
       </div>
     </div>
     <div class="img-container">
@@ -93,16 +126,29 @@ height: 40px;
     
   </div>
   
- <div style="height: 82px;">
-   
- </div>
+  <div style="height: 82px;">
+    
+  </div>
   
- 
+  
   <div id="notes">
     
     
-    <img src="/imgs/other/noteLoad.png" alt="" id="loaderImg"/>
-   
+    <img src="/imgs/other/noteLoad.png" alt="" id="loaderImg" />
+    <div class="tutorial">
+      
+      <div class="a">
+        
+        
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><!--Boxicons v3.0 https://boxicons.com | License  https://docs.boxicons.com/free-->
+          <path d="M13 10h-2v3H8v2h3v3h2v-3h3v-2h-3z" />
+          <path d="m19.94 7.68-.03-.09a.8.8 0 0 0-.2-.29l-5-5c-.09-.09-.19-.15-.29-.2l-.09-.03a.8.8 0 0 0-.26-.05c-.02 0-.04-.01-.06-.01H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-12s-.01-.04-.01-.06c0-.09-.02-.17-.05-.26ZM6 20V4h7v4c0 .55.45 1 1 1h4v11z" />
+        </svg>
+        
+      </div>
+      <div class="b">আইকনে ক্লিক করে নোট অ্যাড করো।</div>
+      
+    </div>
   </div>
   
   

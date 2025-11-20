@@ -58,13 +58,13 @@ body {
 }
 
 .bottom-navigation-wrapper {
-  background:#FAFAFA ;
+  background: #FAFAFA;
   width: 100%;
   height: 90px;
   position: fixed;
   bottom: 0;
   z-index: 99999;
-  border-top:2px solid #E5E5E5 ;
+  border-top: 2px solid #E5E5E5;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   
@@ -74,14 +74,6 @@ body {
 
 
 
-.bottom-navigation-wrapper-gradient {
-  width: 100%;
-  height: 20px;
-  background: linear-gradient(to bottom, #FFFFFF00, #FFFFFF);
-  position: fixed;
-  bottom: 13.5vh;
-  z-index: 9998;
-}
 
 
 
@@ -108,6 +100,7 @@ div {
   
   
 }
+
 /*
 
 .bottom-navigation-inner-wrapper:active {
@@ -196,10 +189,10 @@ svg {
 
 
 .header {
-  position:fixed;
+  position: fixed;
   z-index: 9997;
-width: 100%;
-background: white;
+  width: 100%;
+  background: #fafafa;
   height: 80px;
   display: grid;
   grid-template-columns: 80px auto;
@@ -208,10 +201,24 @@ background: white;
   
 }
 
-.x4{
+
+.headerMain {
+  position: fixed;
+  z-index: 9997;
+  width: 100%;
+  height: 80px;
+  display: grid;
+  grid-template-columns: 80px auto;
+  
+  
+}
+
+
+.x4 {
   display: grid;
   grid-template-columns: 80px auto 60px 80px;
 }
+
 .img-container {
   
   display: grid;
@@ -249,14 +256,14 @@ background: white;
 .logo {
   width: 45px;
   height: 45px;
- 
-  border-radius:50% ;
+  
+  border-radius: 50%;
   
   
 }
 
 
-.profilePic{
+.profilePic {
   border-radius: 50%;
 }
 
@@ -311,7 +318,7 @@ background: white;
 
 
 
-#feature-info-txt:active{
+#feature-info-txt:active {
   opacity: 1;
 }
 
@@ -336,11 +343,11 @@ background: white;
   padding: 30px 30px 0px 30px;
   overflow: scroll;
   text-align: justify;
-text-justify: inner-word;
-font-size: 15px;
-font-family: LiAdorNoirritLight;
-transition: all  0.1s ease;
-opacity: 0.7;
+  text-justify: inner-word;
+  font-size: 15px;
+  font-family: LiAdorNoirritLight;
+  transition: all 0.1s ease;
+  opacity: 0.7;
 }
 
 .feature-info-btn-wrapper {
@@ -355,10 +362,11 @@ opacity: 0.7;
 }
 
 .sign-in-up {
+  
   width: 100%;
   height: 100vh;
   display: grid;
-  
+  position: fixed;
   place-items: center;
   
   
@@ -368,7 +376,7 @@ opacity: 0.7;
   
   width: 250px;
   height: 350px;
-  
+  background: #fafafa;
   border-radius: 40px;
   border: 2px solid #E5E5E5;
   display: grid;
@@ -404,35 +412,32 @@ opacity: 0.7;
 
 
 
-    .logo {
-      animation: rotateLogo 7.5s linear infinite;
-    }
-    
-    @keyframes rotateLogo {
-      from {
-        transform: rotate(0deg);
-      }
-      
-      to {
-        transform: rotate(360deg);
-      }
-    }
+.logo {
+  animation: rotateLogo 7.5s linear infinite;
+}
+
+@keyframes rotateLogo {
+  from {
+    transform: rotate(0deg);
+  }
+  
+  to {
+    transform: rotate(360deg);
+  }
+}
 
 
 
 
-.showNav{
+.showNav {
   position: fixed;
   bottom: 30px;
   right: 30px;
   background: #FAFAFA;
-  border:2px solid #E5E5E5;
+  border: 2px solid #E5E5E5;
   width: 40px;
   height: 25px;
   border-radius: 30px;
   display: grid;
   place-items: center;
 }
-
-
-

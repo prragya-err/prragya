@@ -45,7 +45,7 @@
     }
     
     .input {
-      
+      background: #fafafa;
       margin-left: 10px;
       border-radius: 30px;
       border: none;
@@ -94,12 +94,53 @@
     svg {
       fill: #E5E5E5;
     }
+    
+    
+    
+    
+    .logoo {
+      position: fixed;
+      
+      opacity: 0.1;
+      
+      animation: rotateLogo 15s linear infinite;
+    }
+    
+    @keyframes rotateLogo {
+      from {
+        transform: rotate(0deg);
+      }
+      
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    
+    .logoX {
+      width: 600px;
+      height: 600px;
+      left: -250px;
+      top: -150px;
+    }
+    
+    .logoY {
+      width: 400px;
+      height: 400px;
+      right: -120px;
+      bottom: -120px;
+    }
   </style>
   
   
 </head>
 
 <body data-page="signinup">
+  
+  
+  
+  <img src="logo.jpg" alt="" class="logoo logoX" />
+  
+  <img src="logo.jpg" alt="" class="logoo logoY" />
   
   
   <div class="sign-in-up">
