@@ -15,9 +15,24 @@
       width: 200px;
       height: 200px;
       margin-bottom: 50px;
+      
+      
     }
     
-
+    
+    
+    body {
+  margin: 0;
+  height: 100vh;
+  background:
+    linear-gradient(to right, #E5E5E550 2px, transparent 2px),
+    linear-gradient(to bottom, #E5E5E550 2px, transparent 2px);
+  background-size: 40px 40px;
+  background-color: white;
+  overflow: hidden;
+}
+    
+    
   </style>
 </head>
 
@@ -85,7 +100,7 @@ color: #000000;">হোম</div>
       <div class="bottom-navigation-title">চ্যাট</div>
     </div>
     
-    <div class="bottom-navigation-inner-wrapper"onclick="window.location.href = 'profile.html'">
+    <div class="bottom-navigation-inner-wrapper" onclick="window.location.href = 'profile.html'">
       <div class="bottom-navigation-icon-wrapper">
         <div class="bottom-navigation-icon-inner-wrapper">
           
@@ -263,6 +278,64 @@ color: #000000;">হোম</div>
   
   
   <script src="main.js" type="module"></script>
+  
+  
+  
+  <script type="text/javascript" charset="utf-8">
+    
+let posX = 0;
+let posY = 0;
+
+// initial random speed
+let speedX = (Math.random() * 0.6 - 0.3);
+let speedY = (Math.random() * 0.6 - 0.3);
+
+// swipe start
+let startX = 0;
+let startY = 0;
+
+// start swipe / drag
+function startTouch(e) {
+  const touch = e.touches ? e.touches[0] : e;
+  startX = touch.clientX;
+  startY = touch.clientY;
+}
+
+// swipe move
+function moveTouch(e) {
+  const touch = e.touches ? e.touches[0] : e;
+  const deltaX = touch.clientX - startX;
+  const deltaY = touch.clientY - startY;
+
+  // update speed based on swipe + small randomness
+  speedX = deltaX * 0.03 + (Math.random() * 0.2 - 0.1);
+  speedY = deltaY * 0.03 + (Math.random() * 0.2 - 0.1);
+
+  startX = touch.clientX;
+  startY = touch.clientY;
+}
+
+// animate with small random wiggle
+function animate() {
+  // add a tiny random wiggle
+  posX += speedX + (Math.random() * 0.1 - 0.05);
+  posY += speedY + (Math.random() * 0.1 - 0.05);
+
+  document.body.style.backgroundPosition = `${posX}px ${posY}px, ${posX}px ${posY}px`;
+
+  requestAnimationFrame(animate);
+}
+
+// mouse events
+document.addEventListener('mousedown', startTouch);
+document.addEventListener('mousemove', moveTouch);
+
+// touch events
+document.addEventListener('touchstart', startTouch);
+document.addEventListener('touchmove', moveTouch);
+
+animate();
+  </script>
 </body>
 
 </html>

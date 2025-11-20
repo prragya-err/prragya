@@ -335,7 +335,7 @@ async function loadNotes(stateNum) {
   const loaderImg = document.getElementById("loaderImg");
   
   let paragraphs = notes.querySelectorAll('p');
-  
+  let tutorial = document.getElementById("tutorial");
   
   ({ data, error } = await sb
     .from('notes')
@@ -350,7 +350,8 @@ async function loadNotes(stateNum) {
       
       
       loaderImg.style.opacity = "0";
-      await wait(300);
+      tutorial.style.opacity = "0";
+      await wait(500);
       
     }
     
