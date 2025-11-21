@@ -15,6 +15,59 @@ function getName() {
 }
 
 
+function getNoteName() {
+  const names = [
+  "ভাসা অক্ষর",
+  "নতুন পাতা",
+  "ভাবনাটুকু",
+  "চুপচাপ লেখা",
+  "অনুচিন্তার খাতা",
+  "ফেলে রাখা কথা",
+  "অনুরাগের কথা",
+  "শব্দের খোঁজে",
+  "আলগোছে লেখা",
+  "অনলিখিত বাক্য",
+  "অজানা অধ্যায়",
+  "ফাঁকা লাইনগুলো",
+  "মনের টুকরো",
+  "পৃষ্ঠার শুরু",
+  "হাওয়ায় লেখা নোট",
+  "অক্ষরের খেলা",
+  "অনুপূর্ণ লাইন",
+  "এক ঝলক লেখা",
+  "অল্পকথা",
+  "মুগ্ধ কথা",
+  "মনোজগতের পৃষ্ঠা",
+  "নিজের জন্য লেখা",
+  "অদেখা নোট",
+  "রঙহীন খাতা",
+  "ভাবনার খাতায়",
+  "শব্দের টুকরো",
+  "সূচনাহীন শেষ",
+  "অপেক্ষায় থাকা কবিতা",
+  "পাতার আড়ালে",
+  "একলা লেখা",
+  "শব্দহীন ভাবনা",
+  "অস্থায়ী পৃষ্ঠা",
+  "আলোকহীন খসড়া",
+  "রুক্ষ কথা",
+  "অনায়াসে লেখা",
+  "মনের রেখা",
+  "সাদামাটা খাতা",
+  "স্মৃতির আড়ালে",
+  "অজানা ভাবনার খসড়া"
+];
+  
+  
+  return names[Math.floor(Math.random() * names.length)];
+}
+
+
+
+
+
+
+
 window.sb = supabase.createClient('https://tjmhvfecspwakhsmwjxo.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRqbWh2ZmVjc3B3YWtoc213anhvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjE1ODY1MDYsImV4cCI6MjA3NzE2MjUwNn0.QHr3rGqI4MzS8NENbqhiiunXwZHmtdH1hplgX7Jbio8');
 
 window.data = null;
@@ -309,7 +362,7 @@ if (addNotes) {
       .from('notes')
       .insert({
         
-        note_title: "untitled",
+        note_title: getNoteName(),
         note_json: { blocks: [] },
         
       }));
@@ -395,7 +448,7 @@ async function loadNotes(stateNum) {
           
           
           p.classList.add('show');
-          
+          p.style.marginBottom="10px";
           
           
         }, (i + 1) * 150);
@@ -429,11 +482,12 @@ async function loadNotes(stateNum) {
       
       
       
-      
+      await wait(20);
       
       
       noteItemF.classList.add('show');
       
+      noteItemF.style.marginBottom="10px";
       
       
       
