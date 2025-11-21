@@ -348,17 +348,99 @@ async function loadNotes(stateNum) {
     
     if (stateNum) {
       
-      
+      await wait(500);
       loaderImg.style.opacity = "0";
       tutorial.style.opacity = "0";
       await wait(500);
+      notes.innerHTML = "";
+      
+      
+      data.forEach(note => {
+        
+        
+        const noteItem = document.createElement("p");
+        
+        noteItem.textContent = note.note_title;
+        
+        
+        
+        noteItem.addEventListener('click', () => {
+          
+          
+          
+          const url = `noteEdit.html?note_title=${encodeURIComponent(note.note_title)}&created_at=${encodeURIComponent(note.created_at)}`;
+          window.location.href = url;
+        });
+        
+        
+        notes.appendChild(noteItem);
+        
+        
+        
+        
+        
+        
+        
+      });
+      
+      
+      paragraphs = notes.querySelectorAll('p');
+      
+      
+      
+      paragraphs.forEach(async (p, i) => {
+        
+        setTimeout(() => {
+          
+          
+          
+          p.classList.add('show');
+          
+          
+          
+        }, (i + 1) * 150);
+        
+      });
+      
+      
+      
+      
       
     }
     
     else {
       
+      const noteItemF = document.createElement("p");
+      
+      noteItemF.textContent = data[0].note_title;
+      
+      
+      
+      noteItemF.addEventListener('click', () => {
+        
+        
+        
+        const url = `noteEdit.html?note_title=${encodeURIComponent(data[0].note_title)}&created_at=${encodeURIComponent(data[0].created_at)}`;
+        window.location.href = url;
+      });
+      
+      
+      notes.prepend(noteItemF);
+      
+      
+      
+      
+      
+      
+      noteItemF.classList.add('show');
+      
+      
+      
+      
+      
+      /*
       paragraphs.forEach((p, i) => {
-
+        
         
         setTimeout(() => {
           
@@ -371,63 +453,21 @@ async function loadNotes(stateNum) {
         
       });
       
-      await wait(paragraphs.length*150);
-      
+      await wait(paragraphs.length * 150);
+      */
     }
     
-    notes.innerHTML = "";
+    
     
   }
   
-  data.forEach(note => {
-    
-    
-    const noteItem = document.createElement("p");
-    
-    noteItem.textContent = note.note_title;
-    
-    
-    
-    noteItem.addEventListener('click',  () => {
-      
-      
-      
-      const url = `noteEdit.html?note_title=${encodeURIComponent(note.note_title)}&created_at=${encodeURIComponent(note.created_at)}`;
-      window.location.href = url;
-    });
-    
-    
-    notes.appendChild(noteItem);
-    
-    
-    
-    
-    
-    
-    
-  });
+  
+  /**/
   
   
   
   
-  paragraphs = notes.querySelectorAll('p');
-  
-  
-  
-  paragraphs.forEach(async (p, i) => {
-    
-    setTimeout(() => {
-      
-      
-      
-      p.classList.add('show');
-     
-      
-      
-   }, (i + 1) * 150);
-  });
-  
-  
+  /**/
   
 }
 
