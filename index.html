@@ -22,17 +22,15 @@
     
     
     body {
-  margin: 0;
-  height: 100vh;
-  background:
-    linear-gradient(to right, #E5E5E550 2px, transparent 2px),
-    linear-gradient(to bottom, #E5E5E550 2px, transparent 2px);
-  background-size: 40px 40px;
-  background-color: white;
-  overflow: hidden;
-}
-    
-    
+      margin: 0;
+      height: 100vh;
+      background:
+        linear-gradient(to right, #E5E5E550 2px, transparent 2px),
+        linear-gradient(to bottom, #E5E5E550 2px, transparent 2px);
+      background-size: 40px 40px;
+      background-color: white;
+      overflow: hidden;
+    }
   </style>
 </head>
 
@@ -121,7 +119,7 @@ color: #000000;">হোম</div>
   
   
   
-  <div class="headerMain" >
+  <div class="headerMain">
     <div class="img-container">
       <div class="inner-img-container">
         <img src="logo.jpg" class="logo" style="opacity: 0.8;" />
@@ -140,9 +138,9 @@ color: #000000;">হোম</div>
   <div style="height: 80px;">
     
   </div>
-  <div class="features" >
+  <div class="features">
     
-    <div id="featureName" >প্রশ্নব্যাংক</div>
+    <div id="featureName">প্রশ্নব্যাংক</div>
     
     
     
@@ -156,58 +154,58 @@ color: #000000;">হোম</div>
       
       <div class="swiper-wrapper">
         
-        <div class="swiper-slide" >
+        <div class="swiper-slide">
           
-          <img src="imgs/features/qb.png" id="img1" style="width: 100%;"/>
+          <img src="imgs/features/qb.png" id="img1" style="width: 100%;margin-top: 15px;height : auto;" />
           
         </div>
         <div class="swiper-slide">
           
-          <img src="imgs/features/res.png" id="img2" style="width: 100%;"/>
+          <img src="imgs/features/res.png" id="img2" style="width: 100%;margin-top: 15px;height : auto;" />
           
         </div>
         <div class="swiper-slide">
           
-          <img src="imgs/features/ai.png" id="img3" style="width: 100%;"/>
+          <img src="imgs/features/ai.png" id="img3" style="width: 100%;margin-top: 15px;height : auto;" />
           
         </div>
         <div class="swiper-slide">
           
-          <img src="imgs/features/note.png" id="img4" style="width: 100%;"/>
-          
-        </div>
-        
-        <div class="swiper-slide">
-          
-          <img src="imgs/features/simulations.png" id="img5" style="width: 100%;"/>
-          
-        </div>
-        <div class="swiper-slide">
-          
-          <img src="imgs/features/doubts.png" id="img6" style="width: 100%;"/>
+          <img src="imgs/features/note.png" id="img4" style="width: 100%;margin-top: 15px;height : auto;" />
           
         </div>
         
         <div class="swiper-slide">
           
-          <img src="imgs/features/chat.png" id="img7" style="width: 100%;"/>
+          <img src="imgs/features/simulations.png" id="img5" style="width: 100%;margin-top: 15px;height : auto;" />
           
         </div>
         <div class="swiper-slide">
           
-          <img src="imgs/features/english.png" id="img8" style="width: 100%;"/>
-          
-        </div>
-        
-        <div class="swiper-slide">
-          
-          <img src="imgs/features/teach.png" id="img9" style="width: 100%;"/>
+          <img src="imgs/features/doubts.png" id="img6" style="width: 100%;margin-top: 15px;height : auto;" />
           
         </div>
         
         <div class="swiper-slide">
           
-          <img src="imgs/features/community.png" id="img10" style="width: 100%;"/>
+          <img src="imgs/features/chat.png" id="img7" style="width: 100%;margin-top: 15px;height : auto;" />
+          
+        </div>
+        <div class="swiper-slide">
+          
+          <img src="imgs/features/english.png" id="img8" style="width: 100%;margin-top: 15px;height : auto;" />
+          
+        </div>
+        
+        <div class="swiper-slide">
+          
+          <img src="imgs/features/teach.png" id="img9" style="width: 100%;margin-top: 15px;height : auto;" />
+          
+        </div>
+        
+        <div class="swiper-slide">
+          
+          <img src="imgs/features/community.png" id="img10" style="width: 100%;margin-top: 15px;height : auto;" />
           
         </div>
         
@@ -222,7 +220,7 @@ color: #000000;">হোম</div>
     
     
     
-    <div class="feature-info">
+    <div class="feature-info" style="background: #fafafa;">
       
       <div class="feature-info-txt" id="feature-info-txt">
         হাজারো অধ্যায়ভিত্তিক প্রশ্ন, পূর্বের বছরের বোর্ড প্রশ্ন এবং অনুশীলনী—সব এক জায়গায়। নিয়মিত প্র্যাকটিস করে নিজের প্রস্তুতিকে পরবর্তী লেভেলে নিয়ে যান।
@@ -281,59 +279,58 @@ color: #000000;">হোম</div>
   
   
   <script type="text/javascript" charset="utf-8">
+    let posX = 0;
+    let posY = 0;
     
-let posX = 0;
-let posY = 0;
-
-// initial random speed
-let speedX = (Math.random() * 0.6 - 0.3);
-let speedY = (Math.random() * 0.6 - 0.3);
-
-// swipe start
-let startX = 0;
-let startY = 0;
-
-// start swipe / drag
-function startTouch(e) {
-  const touch = e.touches ? e.touches[0] : e;
-  startX = touch.clientX;
-  startY = touch.clientY;
-}
-
-// swipe move
-function moveTouch(e) {
-  const touch = e.touches ? e.touches[0] : e;
-  const deltaX = touch.clientX - startX;
-  const deltaY = touch.clientY - startY;
-
-  // update speed based on swipe + small randomness
-  speedX = deltaX * 0.03 + (Math.random() * 0.2 - 0.1);
-  speedY = deltaY * 0.03 + (Math.random() * 0.2 - 0.1);
-
-  startX = touch.clientX;
-  startY = touch.clientY;
-}
-
-// animate with small random wiggle
-function animate() {
-  // add a tiny random wiggle
-  posX += speedX + (Math.random() * 0.1 - 0.05);
-  posY += speedY + (Math.random() * 0.1 - 0.05);
-
-  document.body.style.backgroundPosition = `${posX}px ${posY}px, ${posX}px ${posY}px`;
-
-  requestAnimationFrame(animate);
-}
-
-// mouse events
-document.addEventListener('mousedown', startTouch);
-document.addEventListener('mousemove', moveTouch);
-
-// touch events
-document.addEventListener('touchstart', startTouch);
-document.addEventListener('touchmove', moveTouch);
-
-animate();
+    // initial random speed
+    let speedX = (Math.random() * 0.6 - 0.3);
+    let speedY = (Math.random() * 0.6 - 0.3);
+    
+    // swipe start
+    let startX = 0;
+    let startY = 0;
+    
+    // start swipe / drag
+    function startTouch(e) {
+      const touch = e.touches ? e.touches[0] : e;
+      startX = touch.clientX;
+      startY = touch.clientY;
+    }
+    
+    // swipe move
+    function moveTouch(e) {
+      const touch = e.touches ? e.touches[0] : e;
+      const deltaX = touch.clientX - startX;
+      const deltaY = touch.clientY - startY;
+      
+      // update speed based on swipe + small randomness
+      speedX = deltaX * 0.03 + (Math.random() * 0.2 - 0.1);
+      speedY = deltaY * 0.03 + (Math.random() * 0.2 - 0.1);
+      
+      startX = touch.clientX;
+      startY = touch.clientY;
+    }
+    
+    // animate with small random wiggle
+    function animate() {
+      // add a tiny random wiggle
+      posX += speedX + (Math.random() * 0.1 - 0.05);
+      posY += speedY + (Math.random() * 0.1 - 0.05);
+      
+      document.body.style.backgroundPosition = `${posX}px ${posY}px, ${posX}px ${posY}px`;
+      
+      requestAnimationFrame(animate);
+    }
+    
+    // mouse events
+    document.addEventListener('mousedown', startTouch);
+    document.addEventListener('mousemove', moveTouch);
+    
+    // touch events
+    document.addEventListener('touchstart', startTouch);
+    document.addEventListener('touchmove', moveTouch);
+    
+    animate();
   </script>
 </body>
 
