@@ -288,7 +288,7 @@ svg {
 .swiper-slide {
   display: grid;
   place-items: center;
-  
+ 
 }
 
 
@@ -296,7 +296,8 @@ svg {
 
 
 .swiper-slide img {
-  
+ 
+
   opacity: 0.4;
   scale: 0.6;
   transition: all 0.5s ease;
@@ -327,7 +328,7 @@ svg {
 .feature-info {
   
   width: 300px;
-  height: calc(100vh - 475px);
+  height: calc(100vh - 450px);
   margin: auto;
   margin-top: 10px;
   border-radius: 40px;
