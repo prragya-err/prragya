@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href=".css">
+  
+  <style type="text/css" media="all">
+    #notes {
+      padding: 10px;
+      
+      max-height: calc(100vh - 82px);
+      
+    }
+    
+    
+    #notes img {
+      width: 250px;
+      height: 250px;
+      display: block;
+      margin: auto;
+      margin-top: 100px;
+      opacity: 0.6;
+      
+      transition: all 0.5s ease;
+    }
+    
+    
+    
+    
+    #notes p {
+      
+      margin: 0px;
+      background: #fafafa;
+      border: 2px solid #E5E5E5;
+      border-radius: 15px;
+      opacity: 0;
+      height: 0px;
+      display: grid;
+      place-items: center start;
+      padding-left: 10px;
+      transition: all 0.2s ease;
+      overflow: hidden;
+      
+    }
+    
+    
+    #notes p.show {
+      opacity: 1;
+      height: 40px;
+    }
+    
+    
+    
+    .tutorial {
+      opacity: 0.6;
+      margin: 0 auto;
+      width: 80%;
+      display: grid;
+      grid-template-columns: 30px auto;
+      height: 30px;
+      transition: 0.3 s all ease;
+ 
+    }
+    
+    
+ 
+    
+    
+    
+    .tutorial div.a {
+      display: grid;
+      place-items: center;}
+      
+      
+ 
+    .tutorial div.a svg {
+      fill: black;
+    }
+    
+    
+    .tutorial div.b {
+      display: grid;
+      place-items: center start;
+      color: black;
+      
+    }
+  </style>
+</head>
+
+<body data-page="notes">
+  
+  
+  
+  
+  
+  
+  
+  <div class="header x4">
+    <div class="img-container">
+      <div class="inner-img-container">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="scale:1.3;"><!--Boxicons v3.0 https://boxicons.com | License  https://docs.boxicons.com/free-->
+          <path d="M21 8h-7V4a1.004 1.004 0 0 0-1.63-.78l-9.99 8c-.24.19-.38.48-.38.78s.14.59.38.78l10 8c.18.14.4.22.62.22.15 0 .3-.03.43-.1.35-.17.57-.52.57-.9v-4h7c.55 0 1-.45 1-1V9c0-.55-.45-1-1-1m-1 6h-7c-.55 0-1 .45-1 1v2.92L4.6 12 12 6.08V9c0 .55.45 1 1 1h7z" />
+        </svg>
+        
+      </div>
+    </div>
+    
+    
+    <div class="title-container">
+      <p>নোট</p>
+    </div>
+    <div class="img-container">
+      <div class="inner-img-container" id="addNotes">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><!--Boxicons v3.0 https://boxicons.com | License  https://docs.boxicons.com/free-->
+          <path d="M13 10h-2v3H8v2h3v3h2v-3h3v-2h-3z" />
+          <path d="m19.94 7.68-.03-.09a.8.8 0 0 0-.2-.29l-5-5c-.09-.09-.19-.15-.29-.2l-.09-.03a.8.8 0 0 0-.26-.05c-.02 0-.04-.01-.06-.01H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-12s-.01-.04-.01-.06c0-.09-.02-.17-.05-.26ZM6 20V4h7v4c0 .55.45 1 1 1h4v11z" />
+        </svg>
+        
+      </div>
+    </div>
+    <div class="img-container">
+      <div class="inner-img-container">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="scale:1.3;"><!--Boxicons v3.0 https://boxicons.com | License  https://docs.boxicons.com/free-->
+          <path d="M21 8h-7V4a1.004 1.004 0 0 0-1.63-.78l-9.99 8c-.24.19-.38.48-.38.78s.14.59.38.78l10 8c.18.14.4.22.62.22.15 0 .3-.03.43-.1.35-.17.57-.52.57-.9v-4h7c.55 0 1-.45 1-1V9c0-.55-.45-1-1-1m-1 6h-7c-.55 0-1 .45-1 1v2.92L4.6 12 12 6.08V9c0 .55.45 1 1 1h7z" />
+        </svg>
+        
+      </div>
+    </div>
+    
+  </div>
+  
+  <div style="height: 82px;">
+    
+  </div>
+  
+  
+  <div id="notes">
+    
+    
+    <img src="/imgs/other/noteLoad.png" alt="" id="loaderImg" />
+    <div class="tutorial" id="tutorial">
+      
+      <div class="a">
+        
+        
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><!--Boxicons v3.0 https://boxicons.com | License  https://docs.boxicons.com/free-->
+          <path d="M13 10h-2v3H8v2h3v3h2v-3h3v-2h-3z" />
+          <path d="m19.94 7.68-.03-.09a.8.8 0 0 0-.2-.29l-5-5c-.09-.09-.19-.15-.29-.2l-.09-.03a.8.8 0 0 0-.26-.05c-.02 0-.04-.01-.06-.01H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-12s-.01-.04-.01-.06c0-.09-.02-.17-.05-.26ZM6 20V4h7v4c0 .55.45 1 1 1h4v11z" />
+        </svg>
+        
+      </div>
+      <div class="b">আইকনে ক্লিক করে নোট অ্যাড করো।</div>
+      
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  <script src="libraries/supabase/supabase.js"></script>
+  
+  <script src="backend.js" type="module"></script>
+  
+  
+  <!-- load supabase -->
+  <script type="module">
+  
+  </script>
+  
+</body>
+
+</html>

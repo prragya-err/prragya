@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>প্রজ্ঞা</title>
+  <link rel="stylesheet" href="libraries/swiperjs/swiper.css" />
+  <link rel="stylesheet" href="main.css">
+  
+  
+  
+  <style type="text/css" media="all">
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    iframe {
+      width: 100%;
+      aspect-ratio: 16/9;
+      border: 0px solid #ccc;
+    }
+    
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      padding: 10px;
+      background: #f0f0f0;
+      
+      overflow-y: auto;
+    }
+    
+    .buttons button {
+      padding: 6px 12px;
+      border: 1px solid #aaa;
+      border-radius: 4px;
+      cursor: pointer;
+      background: white;
+    }
+    
+    .buttons button:hover {
+      background: #ddd;
+    }
+  </style>
+</head>
+
+<body>
+  
+  
+  
+  
+  
+  
+  
+  <div class="header x4">
+    <div class="img-container">
+      <div class="inner-img-container">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="scale:1.5;"><!--Boxicons v3.0 https://boxicons.com | License  https://docs.boxicons.com/free-->
+          <path d="M14.29 6.29 8.59 12l5.7 5.71 1.42-1.42-4.3-4.29 4.3-4.29z" />
+        </svg>
+        
+      </div>
+    </div>
+    
+    
+    <div class="title-container">
+      <p>সিমুলেশন</p>
+    </div>
+    <div class="img-container">
+      <div class="inner-img-container" id="addNotes">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><!--Boxicons v3.0 https://boxicons.com | License  https://docs.boxicons.com/free-->
+          <path d="M20 2H4c-.55 0-1 .45-1 1v2c0 .22.07.43.2.6L9 13.33V21a1 1 0 0 0 1 1c.15 0 .31-.04.45-.11l4-2A1 1 0 0 0 15 19v-5.67l5.8-7.73c.13-.17.2-.38.2-.6V3c0-.55-.45-1-1-1m-1 2.67-5.8 7.73c-.13.17-.2.38-.2.6v5.38l-2 1V13c0-.22-.07-.43-.2-.6L5 4.67V4h14z" />
+        </svg>
+      </div>
+    </div>
+    <div class="img-container">
+      <div class="inner-img-container">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><!--Boxicons v3.0 https://boxicons.com | License  https://docs.boxicons.com/free-->
+          <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z" />
+        </svg>
+      </div>
+    </div>
+    
+  </div>
+  
+  
+  <div style="height:82px;">
+    
+  </div>
+  
+  
+  
+  
+  <iframe id="viewer" src=""></iframe>
+  
+  <div class="buttons" id="btnContainer">
+    
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="libraries/swiperjs/swiper.js"></script>
+  
+  <script src="main.js" type="module"></script>
+  <script src="libraries/supabase/supabase.js" type="module"></script>
+  <script src="backend.js" type="module"></script>
+  <script type="text/javascript" charset="utf-8">
+    const files = [
+      "atomic-interactions_en.html",
+      "balancing-act_en.html",
+      "balloons-and-static-electricity.html",
+      "bending-light_en.html",
+      "blackbody-spectrum_en.html",
+      "build-a-nucleus_en.html",
+      "build-an-atom_en.html",
+      "buoyancy-basics _en.html",
+      "buoyancy_en.html",
+      "calculus-grapher_en.html",
+      "capacitor-lab-basics_en.html",
+      "charges-and-fields_en.html",
+      "circuit-construction-kit-ac-virtual-lab_en.html",
+      "circuit-construction-kit-ac_en.html",
+      "circuit-construction-kit-dc-virtual-lab_en.html",
+      "circuit-construction-kit-dc_en.html",
+      "collision-lab_en.html",
+      "color-vision_en.html",
+      "coulombs-law_en.html",
+      "density_en.html",
+      "diffusion_en.html",
+      "energy-forms-and-changes_en.html",
+      "energy-skate-park-basics_en.html",
+      "energy-skate-park_en.html",
+      "faradays-electromagnetic-lab_en.html",
+      "faradays-law_en.html",
+      "forces-and-motion-basics_en.html",
+      "friction_en.html",
+      "gas-properties_en.html",
+      "gases-intro_en.html",
+      "generator_en.html",
+      "geometric-optics-basics_en.html",
+      "geometric-optics_en.html",
+      "gravity-and-orbits_en.html",
+      "gravity-force-lab-basics_en.html",
+      "hookes-law_en.html",
+      "john-travoltage_en.html",
+      "keplers-laws_en.html",
+      "magnet-and-compass_en.html",
+      "magnets-and-electromagnets_en.h",
+      "masses-and-springs-basics_en.htr",
+      "masses-and-springs_en.html",
+      "models-of-the-hydrogen-atom_en.ml",
+      "molecules-and-light_en.html",
+      "my-solar-system_en.html",
+      "normal-modes_en.html",
+      "ohms-law_en.html",
+      "pendulum-lab_en.html",
+      "projectile-data-lab_en.html",
+      "projectile-motion_en.html",
+      "resistance-in-a-wire_en.html",
+      "rutherford-scattering en.html",
+      "SOund-waves_en.html",
+      "states-of-matter-basics_en.html",
+      "states-of-matter_en.html",
+      "under-pressure_en.html",
+      "vector-addition_en.html",
+      "wave-interferenceen.html",
+      "wave-on-a-string_en.html",
+      "waves-intro_en.html"
+    ];
+    
+    const container = document.getElementById('btnContainer');
+    const viewer = document.getElementById('viewer');
+    
+    files.forEach(file => {
+      const btn = document.createElement('button');
+      btn.textContent = file;
+      btn.addEventListener('click', () => {
+        viewer.src = '/simulations/phet/physics/' + file;
+      });
+      container.appendChild(btn);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>প্রজ্ঞা</title>
+  <link rel="stylesheet" href="libraries/swiperjs/swiper.css" />
+  <link rel="stylesheet" href="main.css">
+  
+  <style type="text/css" media="all">
+    .profilePic {
+      width: 42px;
+      height: 42px;
+      background: #E5E5E5;
+      
+      animation: pulseOpacity 1.2s 10 ease-in-out;
+    }
+    
+    @keyframes pulseOpacity {
+      0% {
+        background: #E5E5E5;
+      }
+      
+      50% {
+        background: #E5E5E580;
+      }
+      
+      100% {
+        background: #E5E5E5;
+      }
+    }
+    
+    
+    
+    
+    .post {
+      
+      display: grid;
+      grid-template-columns: 60px auto;
+      height: 60px;
+    }
+    
+    
+    
+    .postImg {
+      display: grid;
+      place-items: center;
+      
+    }
+    
+    .postTxt {
+      display: grid;
+      place-items: center start;
+    }
+    
+    .postTxt p {
+      font-size: 15px;
+      width: calc(100% - 11px);
+      display: grid;
+      place-items: center start;
+      background: #fafafa;
+      border: 2px solid #E5E5E5;
+      border-radius: 30px;
+      height: 40px;
+      color: #7F7F7F;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    .feed {
+      
+      
+      width: 100vw;
+      
+    }
+    
+    .feed .megh {
+      width: calc(100% - 18px);
+      
+      margin: auto;
+      border-radius: 30px;
+      margin-bottom: 10px;
+      
+      
+      
+    }
+  </style>
+</head>
+
+<body>
+  
+  
+  
+  <div class="bottom-navigation-wrapper" id="bottomNavigationWrapper">
+    
+    <div class="bottom-navigation-inner-wrapper" onclick="window.location.href = 'index.html'">
+      <div class="bottom-navigation-icon-wrapper">
+        
+        <div class="bottom-navigation-icon-inner-wrapper">
+          
+          
+          
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><!--Boxicons v3.0 https://boxicons.com | License  https://docs.boxicons.com/free-->
+            <path d="M3 13h1v7c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-7h1c.4 0 .77-.24.92-.62.15-.37.07-.8-.22-1.09l-8.99-9a.996.996 0 0 0-1.41 0l-9.01 9c-.29.29-.37.72-.22 1.09s.52.62.92.62Zm7 7v-5h4v5zm2-15.59 6 6V20h-2v-5c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v5H6v-9.59z" />
+          </svg>
+          
+          
+          
+        </div>
+        
+        
+      </div>
+      <div class="bottom-navigation-title">হোম</div>
+    </div>
+    
+    <div class="bottom-navigation-inner-wrapper" onclick="window.location.href = 'community.html'">
+      <div class="bottom-navigation-icon-wrapper">
+        <div class="bottom-navigation-icon-inner-wrapper" style="background: #E5E5E5;
+width: 64px;">
+          
+          
+          
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: #000000;
+scale: 1;"><!--Boxicons v3.0 https://boxicons.com | License  https://docs.boxicons.com/free-->
+            <path d="M10 13H8c-2.76 0-5 2.24-5 5v1c0 .55.45 1 1 1h10c.55 0 1-.45 1-1v-1c0-2.76-2.24-5-5-5m-5 5c0-1.65 1.35-3 3-3h2c1.65 0 3 1.35 3 3zM12.73 6.51c-.08-.22-.19-.42-.3-.62v-.01c-.69-1.14-1.93-1.89-3.42-1.89-2.28 0-4 1.72-4 4s1.72 4 4 4c1.49 0 2.73-.74 3.42-1.89v-.01c.12-.2.22-.4.3-.62.02-.06.03-.12.05-.18.06-.17.11-.34.15-.52.05-.25.07-.51.07-.78s-.03-.53-.07-.78c-.03-.18-.09-.35-.15-.52-.02-.06-.03-.12-.05-.18M9 10c-1.18 0-2-.82-2-2s.82-2 2-2 2 .82 2 2-.82 2-2 2M15 10q-.165 0-.33-.03c-.22.66-.56 1.27-.98 1.81.41.13.84.22 1.31.22 2.28 0 4-1.72 4-4s-1.72-4-4-4c-.47 0-.9.09-1.31.22.43.53.76 1.14.98 1.81.11-.01.21-.03.33-.03 1.18 0 2 .82 2 2s-.82 2-2 2M16 13h-1.11c.6.58 1.08 1.27 1.44 2.03C17.83 15.2 19 16.46 19 18h-2v1c0 .35-.07.69-.18 1H20c.55 0 1-.45 1-1v-1c0-2.76-2.24-5-5-5" />
+          </svg>
+          
+          
+          
+          
+        </div>
+      </div>
+      <div class="bottom-navigation-title" style="font-family: LiAdorNoirritBold;
+color: #000000;
+}">কমিউনিটি</div>
+    </div>
+    
+    <div class="bottom-navigation-inner-wrapper">
+      <div class="bottom-navigation-icon-wrapper">
+        <div class="bottom-navigation-icon-inner-wrapper">
+          
+          
+          
+          
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><!--Boxicons v3.0 https://boxicons.com | License  https://docs.boxicons.com/free-->
+            <path d="M20 17h-7c-.18 0-.36.05-.51.14L9 19.23V18c0-.55-.45-1-1-1H4V5h11V3H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h3v2c0 .36.19.69.51.87a1 1 0 0 0 1-.01L13.27 19h6.72c1.1 0 2-.9 2-2v-7h-2v7Z" />
+            <path d="M20 2a3 3 0 1 0 0 6 3 3 0 1 0 0-6" />
+          </svg>
+          
+          
+        </div>
+      </div>
+      <div class="bottom-navigation-title">চ্যাট</div>
+    </div>
+    
+    <div class="bottom-navigation-inner-wrapper">
+      <div class="bottom-navigation-icon-wrapper">
+        <div class="bottom-navigation-icon-inner-wrapper">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><!--Boxicons v3.0 https://boxicons.com | License  https://docs.boxicons.com/free-->
+            <path d="M12 6c-2.28 0-4 1.72-4 4s1.72 4 4 4 4-1.72 4-4-1.72-4-4-4m0 6c-1.18 0-2-.82-2-2s.82-2 2-2 2 .82 2 2-.82 2-2 2" />
+            <path d="M12 2C6.49 2 2 6.49 2 12c0 3.26 1.58 6.16 4 7.98V20h.03c1.67 1.25 3.73 2 5.97 2s4.31-.75 5.97-2H18v-.02c2.42-1.83 4-4.72 4-7.98 0-5.51-4.49-10-10-10M8.18 19.02C8.59 17.85 9.69 17 11 17h2c1.31 0 2.42.85 2.82 2.02-1.14.62-2.44.98-3.82.98s-2.69-.35-3.82-.98m9.3-1.21c-.81-1.66-2.51-2.82-4.48-2.82h-2c-1.97 0-3.66 1.16-4.48 2.82A7.96 7.96 0 0 1 4 11.99c0-4.41 3.59-8 8-8s8 3.59 8 8c0 2.29-.97 4.36-2.52 5.82" />
+          </svg>
+          
+          
+          
+        </div>
+      </div>
+      <div class="bottom-navigation-title">প্রোফাইল</div>
+    </div>
+    
+    
+  </div>
+  <div class="header x4">
+    <div class="img-container">
+      <div class="inner-img-container">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="scale:1.5;"><!--Boxicons v3.0 https://boxicons.com | License  https://docs.boxicons.com/free-->
+          <path d="M14.29 6.29 8.59 12l5.7 5.71 1.42-1.42-4.3-4.29 4.3-4.29z" />
+        </svg>
+        
+      </div>
+    </div>
+    
+    
+    <div class="title-container">
+      <p>কমিউনিটি</p>
+    </div>
+    <div class="img-container">
+      <div class="inner-img-container" id="addNotes">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><!--Boxicons v3.0 https://boxicons.com | License  https://docs.boxicons.com/free-->
+          <path d="M20 2H4c-.55 0-1 .45-1 1v2c0 .22.07.43.2.6L9 13.33V21a1 1 0 0 0 1 1c.15 0 .31-.04.45-.11l4-2A1 1 0 0 0 15 19v-5.67l5.8-7.73c.13-.17.2-.38.2-.6V3c0-.55-.45-1-1-1m-1 2.67-5.8 7.73c-.13.17-.2.38-.2.6v5.38l-2 1V13c0-.22-.07-.43-.2-.6L5 4.67V4h14z" />
+        </svg>
+      </div>
+    </div>
+    <div class="img-container">
+      <div class="inner-img-container">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><!--Boxicons v3.0 https://boxicons.com | License  https://docs.boxicons.com/free-->
+          <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z" />
+        </svg>
+      </div>
+    </div>
+    
+  </div>
+  <div class="showNav" id="showNav">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><!--Boxicons v3.0 https://boxicons.com | License  https://docs.boxicons.com/free-->
+      <path d="m7.71 15.71 4.29-4.3 4.29 4.3 1.42-1.42L12 8.59l-5.71 5.7z" />
+    </svg>
+  </div>
+  
+  <div style="width: 10px;height: 80px;"></div>
+  
+  
+  <div class="post">
+    
+    <div class="postImg"><img src="transparent.png" alt="g" class="profilePic">
+      
+    </div>
+    
+    
+    <div class="postTxt">
+      
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;মনের আকাশে আজ কি ভাসছে?</p>
+      
+    </div>
+    
+    
+    
+    
+  </div>
+  
+  <style type="text/css" media="all">
+    .megh {
+      min-height: 200px;
+      overflow: hidden;
+      background: #E5E5E550;
+      
+    }
+    
+    .meghHeader {
+    
+      width: 100%;
+      height: 60px;
+      display: grid;
+      grid-template-columns: 60px auto;
+    }
+    
+    .meghProfile {
+      
+      display: grid;
+      place-items: center;
+    }
+    
+    .meghProfilePic {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+    
+    .meghTitle {
+      
+      display: grid;
+      grid-template-rows: 34px 16px;
+    }
+    
+    
+    .meghName {
+      
+      font-size: 18px;
+      display: grid;
+      place-items: end start;
+      font-family: LiAdorNoirritBold;
+      color: black;
+      opacity: 0.7;
+      
+    }
+    
+    .meghInfo {
+      display: grid;
+      grid-template-columns: auto 100px;
+      
+      
+    }
+    
+    
+    .meghCategory {
+      font-size: 10px;
+      color: black;
+      font-family: LiAdorNoirritLight;
+      opacity: 0.6;
+    }
+    
+    
+    
+    
+    .meghTime {
+      font-size: 10px;
+      padding-right: 10px;
+      display: grid;
+      place-items: start end;
+    }
+    
+    
+    .meghText {
+      font-size: 14px;
+      font-family: LiAdorNoirritLight;
+      padding: 0px 10px 10px 10px;
+      background: #F2F2F2x;
+      text-align: justify;
+      text-justify: inner-word;
+    }
+    
+    
+    
+    
+    
+    
+    .meghImg {
+      width: 100%;
+      height: auto;
+      border-radius: 0px 0px 0px 0px;
+      
+    }
+    
+    
+    .optionsImg {
+    margin-bottom: 15px;
+      color: #FFFFFFCC;
+      height: 30px;
+      width: 100%;
+      
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      
+    }
+    
+    .optionsImg svg {
+      fill: black;
+      opacity: 0.8;
+      scale: 0.6;
+      padding: 5px;
+      
+      
+    }
+    
+   .optionsImg svg:active{
+     scale: 0.5;
+     opacity: 1;
+   }
+    
+    .item {
+      display: grid;
+      place-items: center;
+      font-size: 10px;
+    }
+    
+    
+   .react{
+     display: grid;
+ place-items:center;
+ grid-template-columns: 1fr 1fr;
+     background:#E5E5E5AB;
+     border-radius: 30px;
+     gap: -5px;
+    
+   }
+    
+    
+       .react2{
+     display: grid;
+ place-items:center;
+ width :68px;
+     background:#E5E5E5AB ;
+     border-radius: 30px;
+   }
+    
+    
+    
+    
+    .optionsTxt {
+      margin-top: 5px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      font-size: 12.5px;
+      text-align: center;
+      color: black;
+      opacity: 0.75;
+    }
+    
+   
+  </style>
+  
+  
+  
+  <div class="feed">
+    
+    
+    
+    <div class="megh">
+      
+      <div class="meghHeader">
+        <div class="meghProfile">
+          
+          <img src="xyz.jpg" alt="" class="meghProfilePic" />
+          
+          
+        </div>
+        <div class="meghTitle">
+          
+          <div class="meghName">মো: ইতিসামুল হক</div>
+          <div class="meghInfo">
+            
+            <div class="meghCategory">
+              
+              মৌলের পর্যাবৃত্ত ধর্ম ও রাসায়নিক বন্ধন
+            </div>
+            <div class="meghTime">
+              ১ মিমিট আগে
+            </div>
+          </div>
+          
+          
+        </div>
+        
+        
+      </div>
+      
+      
+      <div class="meghText">
+        
+        সাইকো মানে শুধু অস্বাভাবিক আচরণ নয়; মানুষের মনের অদ্ভুত সব জটিলতা আর অচেনা প্রতিক্রিয়ার প্রকাশ। আমাদের প্রত্যেকের ভেতরেই কিছু না কিছু অন্ধকার, চাপা রাগ, আতঙ্ক বা ভুলে যাওয়া স্মৃতি লুকিয়ে থাকে। কখনো পরিস্থিতি মানুষের মনকে এমনভাবে বদলে দেয় যে, তার আচরণ অন্যদের কাছে “সাইকো” মনে হয়। কিন্তু গভীরে গেলে দেখা যায়—এগুলো আসলে ভয়, একাকিত্ব, ভালোবাসাহীনতা বা হতাশার জমাট পরিণতি। তাই কাউকে “সাইকো” বলার আগে তার মনের গল্পটা বোঝা জরুরি; কারণ মানুষের অদ্ভুত আচরণের পেছনে থাকে অজানা ব্যথা, এবং সেই ব্যথাটাই বোঝার নামই মনোবিজ্ঞান।
+        
+      </div>
+      <div class="meghImgWrapper">
+        
+        <img src="yzx.jpg" alt="" class="meghImg">
+        
+        
+      </div>
+      
+      <div class="optionsTxt">
+        
+        <p>১০০০ × ১২০০</p>
+        <p>৬০০ কমেন্টস</p>
+        <p>২০০ সেভ</p>
+      </div>
+      
+      
+      
+      
+      
+      <div class="optionsImg">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <div class="item">
+          <div class="react">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><!--Boxicons v3.0 https://boxicons.com | License  https://docs.boxicons.com/free-->
+            <path d="M3 13h8v8h2v-8h8v-2h-8V3h-2v8H3z" />
+          </svg>
+          
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><!--Boxicons v3.0 https://boxicons.com | License  https://docs.boxicons.com/free-->
+            <path d="M3 11h18v2H3z" />
+          </svg>
+          
+        
+         </div> 
+        </div>
+        <div class="item">
+     <div class="react2">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><!--Boxicons v3.0 https://boxicons.com | License  https://docs.boxicons.com/free-->
+            <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h6.72l4.76 2.86c.16.09.34.14.51.14s.34-.04.49-.13c.31-.18.51-.51.51-.87v-2h3c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2Zm0 14h-4c-.55 0-1 .45-1 1v1.23l-3.49-2.09A1.03 1.03 0 0 0 11 16H4V4h16z" />
+          </svg>
+          
+     </div>    
+          
+        </div>
+        <div class="item">
+          <div class="react2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><!--Boxicons v3.0 https://boxicons.com | License  https://docs.boxicons.com/free-->
+            <path d="M18.5 2h-12C4.57 2 3 3.57 3 5.5V21c0 .35.18.67.47.85s.66.2.97.04l5.55-2.78 5.55 2.78a.997.997 0 0 0 1.45-.89v-8h4c.55 0 1-.45 1-1V5.5c0-1.93-1.57-3.5-3.5-3.5ZM15 19.38l-4.55-2.28a1 1 0 0 0-.89 0l-4.55 2.28V5.5c0-.83.67-1.5 1.5-1.5h8.85c-.22.46-.35.96-.35 1.5v13.88ZM20 11h-3V5.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5z" />
+          </svg>
+          </div>
+        </div>
+        
+        
+        
+        
+        
+        
+      </div>
+      
+      
+      
+      
+      
+      
+      
+    </div>
+    
+    
+    
+    
+    
+    
+    <div class="megh">
+      
+      <div class="meghHeader">
+        <div class="meghProfile">
+          
+          <img src="xyz.jpg" alt="" class="meghProfilePic" />
+          
+          
+        </div>
+        <div class="meghTitle">
+          
+          <div class="meghName">মো: ইতিসামুল হক</div>
+          <div class="meghInfo">
+            
+            <div class="meghCategory">
+              
+              মৌলের পর্যাবৃত্ত ধর্ম ও রাসায়নিক বন্ধন
+            </div>
+            <div class="meghTime">
+              ১ মিমিট আগে
+            </div>
+          </div>
+          
+          
+        </div>
+        
+        
+      </div>
+      
+      
+      <div class="meghText">
+        
+        সাইকো মানে শুধু অস্বাভাবিক আচরণ নয়; মানুষের মনের অদ্ভুত সব জটিলতা আর অচেনা প্রতিক্রিয়ার প্রকাশ। আমাদের প্রত্যেকের ভেতরেই কিছু না কিছু অন্ধকার, চাপা রাগ, আতঙ্ক বা ভুলে যাওয়া স্মৃতি লুকিয়ে থাকে। কখনো পরিস্থিতি মানুষের মনকে এমনভাবে বদলে দেয় যে, তার আচরণ অন্যদের কাছে “সাইকো” মনে হয়। কিন্তু গভীরে গেলে দেখা যায়—এগুলো আসলে ভয়, একাকিত্ব, ভালোবাসাহীনতা বা হতাশার জমাট পরিণতি। তাই কাউকে “সাইকো” বলার আগে তার মনের গল্পটা বোঝা জরুরি; কারণ মানুষের অদ্ভুত আচরণের পেছনে থাকে অজানা ব্যথা, এবং সেই ব্যথাটাই বোঝার নামই মনোবিজ্ঞান।
+        
+      </div>
+      <div class="meghImgWrapper">
+        
+        <img src="yzx.jpg" alt="" class="meghImg">
+        
+        
+      </div>
+      
+      <div class="optionsTxt">
+        
+        <p>১০০০ × ১২০০</p>
+        <p>৬০০ কমেন্টস</p>
+        <p>২০০ সেভ</p>
+      </div>
+      
+      
+      
+      
+      
+      <div class="optionsImg">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <div class="item">
+          <div class="react">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><!--Boxicons v3.0 https://boxicons.com | License  https://docs.boxicons.com/free-->
+            <path d="M3 13h8v8h2v-8h8v-2h-8V3h-2v8H3z" />
+          </svg>
+          
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><!--Boxicons v3.0 https://boxicons.com | License  https://docs.boxicons.com/free-->
+            <path d="M3 11h18v2H3z" />
+          </svg>
+          
+        
+         </div> 
+        </div>
+        <div class="item">
+     <div class="react2">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><!--Boxicons v3.0 https://boxicons.com | License  https://docs.boxicons.com/free-->
+            <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h6.72l4.76 2.86c.16.09.34.14.51.14s.34-.04.49-.13c.31-.18.51-.51.51-.87v-2h3c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2Zm0 14h-4c-.55 0-1 .45-1 1v1.23l-3.49-2.09A1.03 1.03 0 0 0 11 16H4V4h16z" />
+          </svg>
+          
+     </div>    
+          
+        </div>
+        <div class="item">
+          <div class="react2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><!--Boxicons v3.0 https://boxicons.com | License  https://docs.boxicons.com/free-->
+            <path d="M18.5 2h-12C4.57 2 3 3.57 3 5.5V21c0 .35.18.67.47.85s.66.2.97.04l5.55-2.78 5.55 2.78a.997.997 0 0 0 1.45-.89v-8h4c.55 0 1-.45 1-1V5.5c0-1.93-1.57-3.5-3.5-3.5ZM15 19.38l-4.55-2.28a1 1 0 0 0-.89 0l-4.55 2.28V5.5c0-.83.67-1.5 1.5-1.5h8.85c-.22.46-.35.96-.35 1.5v13.88ZM20 11h-3V5.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5z" />
+          </svg>
+          </div>
+        </div>
+        
+        
+        
+        
+        
+        
+      </div>
+      
+      
+      
+      
+      
+      
+      
+    </div>
+    
+    
+    
+    
+    
+    
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  <br /><br /><br /><br />
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="libraries/swiperjs/swiper.js"></script>
+  
+  <script src="main.js" type="module"></script>
+  <script src="libraries/supabase/supabase.js" type="module"></script>
+  <script src="backend.js" type="module"></script>
+  <script type="text/javascript" charset="utf-8">
+    let bottomNavigationWrapper = document.getElementById("bottomNavigationWrapper");
+    let showNav = document.getElementById("showNav");
+    
+    setTimeout(() => {
+      bottomNavigationWrapper.style.transform = "translate(0%,100%)";
+      
+      
+      
+    }, 500);
+    
+    
+    showNav.onclick = () => {
+      bottomNavigationWrapper.style.transform = "translate(0%,0%)";
+      
+      
+      setTimeout(() => {
+        
+        bottomNavigationWrapper.style.transform = "translate(0%,100%)";
+        
+      }, 1000);
+    };
+  </script>
+</body>
+
+</html>

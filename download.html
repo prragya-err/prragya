@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prragya</title>
+  
+  <style>
+    
+    @font-face {
+      font-family: 'LiAdorNoirritRegular';
+      src: url('fonts/LiAdorNoirritRegular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+    
+    a {
+      -webkit-tap-highlight-color: transparent;
+      cursor: pointer;
+      
+      background: #fafafa;
+      
+      width: 50%;
+      height: 30px;
+      border: 2px solid #E5E5E5;
+      display: grid;
+      place-items: center;
+      border-radius: 50px;
+      transition: 0.2s ease;
+      user-select: none;
+      text-decoration: none;
+      color: #7F7F7F;
+    }
+    
+    /* Active / pressed */
+    a:active {
+      transform: scale(0.9);
+      background: black;
+      border-color:black ;
+      color: white;
+      font-weight: bold;
+      font-size:15px;
+    }
+    
+    body {
+      margin: 0;
+      font-family :LiAdorNoirritRegular;
+      background:
+        linear-gradient(to right, #E5E5E550 2px, transparent 2px),
+        linear-gradient(to bottom, #E5E5E550 2px, transparent 2px);
+      background-size: 40px 40px;
+      background-color: white;
+      overflow: hidden;
+    }
+    
+    body>div {
+      height: 100vh;
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+    }
+    
+   .logo{
+     
+     width:200px;
+     height:200px;
+     mix-blend-mode: multiply;
+   
+  animation: spin 10s linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+   
+  }
+  to {
+    transform: rotate(360deg);
+  
+  }
+}
+  </style>
+  
+</head>
+
+<body>
+  
+  <div>
+    <div style="display: grid;place-items: end center;font-size: 20px;font-weight: bold;padding-bottom: 10px;">
+      <img src="logo.jpg" class="logo" />
+      প্রজ্ঞা ডাউনলোড করো</div>
+    
+    <div style="display:grid;place-items:start center;">
+      <a href="Prragya.apk" download>ডাউনলোড করো</a>
+    </div>
+  </div>
+  
+  
+  
+ <script type="text/javascript" charset="utf-8">
+   let posX = 0;
+let posY = 0;
+
+// initial random speed
+let speedX = (Math.random() * 0.6 - 0.3);
+let speedY = (Math.random() * 0.6 - 0.3);
+
+// swipe start
+let startX = 0;
+let startY = 0;
+
+// start swipe / drag
+function startTouch(e) {
+  const touch = e.touches ? e.touches[0] : e;
+  startX = touch.clientX;
+  startY = touch.clientY;
+}
+
+// swipe move
+function moveTouch(e) {
+  const touch = e.touches ? e.touches[0] : e;
+  const deltaX = touch.clientX - startX;
+  const deltaY = touch.clientY - startY;
+  
+  // update speed based on swipe + small randomness
+  speedX = deltaX * 0.03 + (Math.random() * 0.2 - 0.1);
+  speedY = deltaY * 0.03 + (Math.random() * 0.2 - 0.1);
+  
+  startX = touch.clientX;
+  startY = touch.clientY;
+}
+
+// animate with small random wiggle
+function animate() {
+  // add a tiny random wiggle
+  posX += speedX + (Math.random() * 0.1 - 0.05);
+  posY += speedY + (Math.random() * 0.1 - 0.05);
+  
+  document.body.style.backgroundPosition = `${posX}px ${posY}px, ${posX}px ${posY}px`;
+  
+  requestAnimationFrame(animate);
+}
+
+// mouse events
+document.addEventListener('mousedown', startTouch);
+document.addEventListener('mousemove', moveTouch);
+
+// touch events
+document.addEventListener('touchstart', startTouch);
+document.addEventListener('touchmove', moveTouch);
+
+animate();
+ </script> 
+  
+  
+</body>
+
+</html>

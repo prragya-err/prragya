@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>প্রজ্ঞা</title>
+  <link rel="stylesheet" href="libraries/swiperjs/swiper.css" />
+  <link rel="stylesheet" href="main.css">
+  
+  
+  <style type="text/css" media="all">
+    body {
+      background: white;
+    }
+    
+    
+    .subject-wrapper {
+      z-index: 99999;
+      background: #fafafa;
+      width: 100vw;
+      height: 100px;
+      position: fixed;
+      overflow: scroll;
+      border-bottom: 2px solid #E5E5E5;
+      display: grid;
+      grid-template-columns: 120px 120px 120px 120px 120px 120px 120px 120px 120px 120px 120px 120px 120px;
+    }
+    
+    
+    .inner-subject-wrapper {
+      
+      display: grid;
+      grid-template-rows: 72px 28px;
+    }
+    
+    
+    .inner-subject-wrapper-up {
+      
+      display: grid;
+      place-items: end center;
+    }
+    
+    .subject-thumbnail {
+      width: 100px;
+      height: 60px;
+      
+      border-radius: 22px;
+      border: 2px solid #E5E5E5;
+      
+    }
+    
+    .inner-subject-wrapper-down {
+      font-size: 12.5px;
+      letter-spacing: -0.5px;
+      text-align: center;
+    }
+    
+    .subject-title {
+      padding-top: 5px;
+    }
+    
+    
+    
+    
+    
+    
+    
+   .subjectName{
+     font-family:LiAdorNoirritBold;
+     font-size: 30px;
+     color: black;
+     opacity: 0.6;
+    padding-top: 10px;
+    padding-left:10px;
+    
+   
+   }
+   
+  .chapterName{
+    background:#fafafa ;
+    border: 2px solid #E5E5E5;
+    margin-left: 20px;
+    margin-right: 10px;
+    height: 50px;
+    display: grid;
+    place-items: center start;
+    padding-left: 15px;
+    border-radius: 30px;
+    margin-top: 10px;
+  } 
+    
+    
+    
+    
+    
+    
+    
+    
+    .topicNames p {
+      
+      
+      font-size: 15px;
+      
+      border-radius: 30px;
+      display: grid;
+      place-items:center start;
+      
+      opacity: 0;
+    
+      transition: all 0.5s ease;
+      cursor: pointer;
+      margin: 0px;
+      margin-left: 40px;
+      margin-right: 10px;
+      height: 0px;
+      overflow: scroll;
+      padding-left: 15px;
+      background: #E5E5E5;
+    }
+    
+    .topicNames p.show {
+      
+      opacity: 1;
+      margin-top: 5px;
+      height: 40px;
+      
+     
+    }
+    
+    
+ .topicNames  p.selected{
+   background: black;
+     color: white;
+   }
+  </style>
+  
+  
+</head>
+
+<body>
+  
+  <div class="subject-wrapper">
+    
+    <div class="inner-subject-wrapper">
+      
+      <div class="inner-subject-wrapper-up">
+        
+        <div class="subject-thumbnail"></div>
+        
+      </div>
+      <div class="inner-subject-wrapper-down">
+        
+        <div class="subject-title">বাংলা ১ম পত্র</div>
+        
+      </div>
+      
+      
+      
+    </div>
+    <div class="inner-subject-wrapper">
+      
+      <div class="inner-subject-wrapper-up">
+        
+        <div class="subject-thumbnail"></div>
+        
+      </div>
+      <div class="inner-subject-wrapper-down">
+        
+        <div class="subject-title">বাংলা ২য় পত্র</div>
+        
+      </div>
+      
+      
+      
+    </div>
+    <div class="inner-subject-wrapper">
+      
+      <div class="inner-subject-wrapper-up">
+        
+        <div class="subject-thumbnail"></div>
+        
+      </div>
+      <div class="inner-subject-wrapper-down">
+        
+        <div class="subject-title">ইংরেজি ১ম পত্র</div>
+        
+      </div>
+      
+      
+      
+    </div>
+    <div class="inner-subject-wrapper">
+      
+      <div class="inner-subject-wrapper-up">
+        
+        <div class="subject-thumbnail"></div>
+        
+      </div>
+      <div class="inner-subject-wrapper-down">
+        
+        <div class="subject-title">ইংরেজি ২য় পত্র</div>
+        
+      </div>
+      
+      
+      
+    </div>
+    <div class="inner-subject-wrapper">
+      
+      <div class="inner-subject-wrapper-up">
+        
+        <div class="subject-thumbnail"></div>
+        
+      </div>
+      <div class="inner-subject-wrapper-down">
+        
+        <div class="subject-title">আইসিটি</div>
+        
+      </div>
+      
+      
+      
+    </div>
+    <div class="inner-subject-wrapper">
+      
+      <div class="inner-subject-wrapper-up">
+        
+        <div class="subject-thumbnail"></div>
+        
+      </div>
+      <div class="inner-subject-wrapper-down">
+        
+        <div class="subject-title">পদার্থবিজ্ঞান ১ম পত্র</div>
+        
+      </div>
+      
+      
+      
+    </div>
+    <div class="inner-subject-wrapper">
+      
+      <div class="inner-subject-wrapper-up">
+        
+        <div class="subject-thumbnail"></div>
+        
+      </div>
+      <div class="inner-subject-wrapper-down">
+        
+        <div class="subject-title">পদার্থবিজ্ঞান ২য় পত্র</div>
+        
+      </div>
+      
+      
+      
+    </div>
+    <div class="inner-subject-wrapper">
+      
+      <div class="inner-subject-wrapper-up">
+        
+        <div class="subject-thumbnail"></div>
+        
+      </div>
+      <div class="inner-subject-wrapper-down">
+        
+        <div class="subject-title">রসায়ন ১ম পত্র</div>
+        
+      </div>
+      
+      
+      
+    </div>
+    <div class="inner-subject-wrapper">
+      
+      <div class="inner-subject-wrapper-up">
+        
+        <div class="subject-thumbnail"></div>
+        
+      </div>
+      <div class="inner-subject-wrapper-down">
+        
+        <div class="subject-title">রসায়ন ২য় পত্র</div>
+        
+      </div>
+      
+      
+      
+    </div>
+    <div class="inner-subject-wrapper">
+      
+      <div class="inner-subject-wrapper-up">
+        
+        <div class="subject-thumbnail"></div>
+        
+      </div>
+      <div class="inner-subject-wrapper-down">
+        
+        <div class="subject-title">জীববিজ্ঞান ১ম পত্র</div>
+        
+      </div>
+      
+      
+      
+    </div>
+    <div class="inner-subject-wrapper">
+      
+      <div class="inner-subject-wrapper-up">
+        
+        <div class="subject-thumbnail"></div>
+        
+      </div>
+      <div class="inner-subject-wrapper-down">
+        
+        <div class="subject-title">জীববিজ্ঞান ২য় পত্র</div>
+        
+      </div>
+      
+      
+      
+    </div>
+    <div class="inner-subject-wrapper">
+      
+      <div class="inner-subject-wrapper-up">
+        
+        <div class="subject-thumbnail"></div>
+        
+      </div>
+      <div class="inner-subject-wrapper-down">
+        
+        <div class="subject-title">উচ্চতর গণিত ১ম পত্র</div>
+        
+      </div>
+      
+      
+      
+    </div>
+    <div class="inner-subject-wrapper">
+      
+      <div class="inner-subject-wrapper-up">
+        
+        <div class="subject-thumbnail"></div>
+        
+      </div>
+      <div class="inner-subject-wrapper-down">
+        
+        <div class="subject-title">উচ্চতর গণিত ২য় পত্র</div>
+        
+      </div>
+      
+      
+      
+    </div>
+    
+    
+    
+    
+  </div>
+  
+  
+  <div style="background: red;height:102px;">
+    
+  </div>
+  
+  
+  <div class="topics">
+    
+    <p class="subjectName">পদার্থবিজ্ঞান ২ম পত্র</p>
+    <p class="chapterName" id="bal">ষষ্ঠ অধ্যায় : জ্যামিতিক আলোকবিজ্ঞান</p>
+    <div class="topicNames">
+      
+      
+      <p>জ্যামিতিক আলোকবিজ্ঞান</p>
+      <p>আলোর প্রতিফলন</p>
+      <p>আলোর প্রতিসরণ</p>
+      <p>ফার্মাটের নীতি</p>
+      <p>ফার্মাটের নীতি ও আলোর প্রতিফলন</p>
+      <p>ফার্মাটের নীতি ও আলোর প্রতিসরণ</p>
+      <p>প্রিজম</p>
+      <p>প্রিজমে আলোর প্রতিসরণ</p>
+      <p>প্রিজমে আলোর বিচ্ছুরণ</p>
+      <p>লেন্স</p>
+      <p>লেন্সের ক্রিয়া</p>
+      <p>লেন্স সম্পর্কিত কিরণের প্রয়োজনীয় রাশি</p>
+      <p>চিত্রের প্রকার</p>
+      <p>গৌণ পৃষ্ঠে আলোয়ের প্রতিসরণ</p>
+      <p>লেন্স তৈরির সমীকরণ</p>
+      <p>লেন্স রমিচিত্র</p>
+      <p>লেন্স সৃষ্ট বিভব</p>
+      <p>লেন্সের ক্ষেত্রে ফোকাস দূরত্ব ও লক্ষবিন্দুর দূরত্বের সাথে বিভব দূরত্বের সম্পর্ক : লেন্সের সাধারণ সমীকরণ</p>
+      <p>লেন্সের প্রধান অক্ষের উপর লক্ষবিন্দুর বিভিন্ন অবস্থানের জন্য বিভব অবস্থান, প্রকৃতি ও আকার নির্ণয়</p>
+      <p>লেন্সের ক্ষমতা</p>
+      <p>দৃষ্টিসহায়ক বা দূরবীক্ষণ</p>
+      <p>অনুবীক্ষণযন্ত্র বা মাইক্রোস্কোপ</p>
+      <p>সরল অনুবীক্ষণযন্ত্র বা মাইক্রোস্কোপ বা বিবর্ধক কাচ</p>
+      <p>যৌগিক বা জটিল অনুবীক্ষণযন্ত্র বা কম্পাউন্ড মাইক্রোস্কোপ</p>
+      <p>দূরবীক্ষণযন্ত্র বা টেলিস্কোপ</p>
+      <p>নক্ষত্র বা জ্যোতিষ্ক বা জ্যোতির্বিদ্যা সংক্রান্ত দূরবীক্ষণযন্ত্র</p>
+      <p>প্রতিফলক দূরবীক্ষণযন্ত্র বা রিফ্লেক্টিং টেলিস্কোপ</p>
+      
+      
+      
+      
+    </div>
+    
+    
+    
+    
+ 
+    <p class="chapterName">ষষ্ঠ অধ্যায় : জ্যামিতিক আলোকবিজ্ঞান</p>
+    <div class="topicNames">
+      
+      
+      <p>জ্যামিতিক আলোকবিজ্ঞান</p>
+      <p>আলোর প্রতিফলন</p>
+      <p>আলোর প্রতিসরণ</p>
+      <p>ফার্মাটের নীতি</p>
+      <p>ফার্মাটের নীতি ও আলোর প্রতিফলন</p>
+      <p>ফার্মাটের নীতি ও আলোর প্রতিসরণ</p>
+      <p>প্রিজম</p>
+      <p>প্রিজমে আলোর প্রতিসরণ</p>
+      <p>প্রিজমে আলোর বিচ্ছুরণ</p>
+      <p>লেন্স</p>
+      <p>লেন্সের ক্রিয়া</p>
+      <p>লেন্স সম্পর্কিত কিরণের প্রয়োজনীয় রাশি</p>
+      <p>চিত্রের প্রকার</p>
+      <p>গৌণ পৃষ্ঠে আলোয়ের প্রতিসরণ</p>
+      <p>লেন্স তৈরির সমীকরণ</p>
+      <p>লেন্স রমিচিত্র</p>
+      <p>লেন্স সৃষ্ট বিভব</p>
+      <p>লেন্সের ক্ষেত্রে ফোকাস দূরত্ব ও লক্ষবিন্দুর দূরত্বের সাথে বিভব দূরত্বের সম্পর্ক : লেন্সের সাধারণ সমীকরণ</p>
+      <p>লেন্সের প্রধান অক্ষের উপর লক্ষবিন্দুর বিভিন্ন অবস্থানের জন্য বিভব অবস্থান, প্রকৃতি ও আকার নির্ণয়</p>
+      <p>লেন্সের ক্ষমতা</p>
+      <p>দৃষ্টিসহায়ক বা দূরবীক্ষণ</p>
+      <p>অনুবীক্ষণযন্ত্র বা মাইক্রোস্কোপ</p>
+      <p>সরল অনুবীক্ষণযন্ত্র বা মাইক্রোস্কোপ বা বিবর্ধক কাচ</p>
+      <p>যৌগিক বা জটিল অনুবীক্ষণযন্ত্র বা কম্পাউন্ড মাইক্রোস্কোপ</p>
+      <p>দূরবীক্ষণযন্ত্র বা টেলিস্কোপ</p>
+      <p>নক্ষত্র বা জ্যোতিষ্ক বা জ্যোতির্বিদ্যা সংক্রান্ত দূরবীক্ষণযন্ত্র</p>
+      <p>প্রতিফলক দূরবীক্ষণযন্ত্র বা রিফ্লেক্টিং টেলিস্কোপs</p>
+      
+      
+      
+      
+    </div>
+    
+    
+  </div>
+  
+  
+  
+  
+  
+  <script src="main.js" type="module"></script>
+  <script type="text/javascript" charset="utf-8">
+    function isSameNodeList(a, b) {
+      if (!a || !b || a.length !== b.length) return false;
+      return [...a].every((el, i) => el === b[i]);
+    }
+    
+    let selectedItems = [];
+    const chapterName = document.querySelectorAll('.topics .chapterName');
+    let visible = false;
+    let previousParagraphs = null;
+    let previousTopic = null;
+    chapterName.forEach(item => {
+      
+      item.addEventListener('click', () => {
+        selectedItems = [];
+        
+        let topicNames = item.nextElementSibling;
+        
+        const paragraphs = topicNames.querySelectorAll('p');
+        
+        
+        
+        if (visible) {
+          
+          
+          previousParagraphs.forEach((p, i) => {
+            
+            
+            
+            
+            setTimeout(() => {
+              
+              p.classList.remove('show');
+              
+              
+            }, i * 100);
+            
+            
+            
+          });
+          visible = !visible;
+          
+          if (isSameNodeList(previousParagraphs, paragraphs)) {
+            return;
+          }
+          
+          
+          
+          
+          
+        }
+        
+        
+        if (!visible) {
+          paragraphs.forEach((p, i) => {
+          
+            setTimeout(() => {
+              
+              
+              
+              p.classList.add('show');
+              
+              
+              
+            }, (i+1) * 100);
+          });
+          
+          visible = !visible;
+          
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        paragraphs.forEach((item, index) => {
+          item.addEventListener('click', () => {
+            
+            // Special behavior for Item 1
+            if (index === 0) {
+              if (item.classList.contains('selected')) {
+                // Deselect all
+                paragraphs.forEach(sel => sel.classList.remove('selected'));
+                selectedItems.length = 0; // clear array
+              } else {
+                // Select all visually
+                paragraphs.forEach(sel => sel.classList.add('selected'));
+                selectedItems.length = 0; // clear array
+                selectedItems.push('কোষ ও এর গঠন'); // only 'all' in array
+              }
+            } else {
+              // Regular toggle for other items
+              if (item.classList.contains('selected')) {
+                item.classList.remove('selected');
+                
+                // If Item 1 is selected, deselect it and remove 'all'
+                const item1 = paragraphs[0];
+                if (item1.classList.contains('selected')) {
+                  item1.classList.remove('selected');
+                  const allIndex = selectedItems.indexOf('কোষ ও এর গঠন');
+                  if (allIndex > -1) selectedItems.splice(allIndex, 1);
+                  
+                  // Add remaining selected items to array
+                  paragraphs.forEach((sel, i) => {
+                    if (i !== 0 && sel.classList.contains('selected')) {
+                      const text = sel.innerText.trim();
+                      if (!selectedItems.includes(text)) selectedItems.push(text);
+                    }
+                  });
+                }
+                
+                // remove from array
+                const text = item.innerText.trim();
+                const idx = selectedItems.indexOf(text);
+                if (idx > -1) selectedItems.splice(idx, 1);
+                
+              } else {
+                item.classList.add('selected');
+                selectedItems.push(item.innerText.trim());
+              }
+            }
+            
+           
+           
+          });
+        });
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        previousParagraphs = paragraphs;
+        
+        
+      });
+      
+      
+      
+      
+      
+      
+      
+    });
+  </script>
+</body>
+
+</html>
