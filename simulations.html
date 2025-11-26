@@ -13,39 +13,61 @@
   
   
   <style type="text/css" media="all">
-    body {
-      font-family: sans-serif;
+    * {
       margin: 0;
       padding: 0;
     }
     
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    
     iframe {
-      z-index:9999999 ;
+      z-index: 9999999;
       width: 100%;
-      aspect-ratio: 16/9;
+      height: 200px;
       border: 0px solid #ccc;
     }
     
     .buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      padding: 10px;
-      background: #f0f0f0;
       
-      overflow-y: auto;
+      
+      
+      height: calc(100vh - 282px);
+      ;
+      overflow: scroll;
     }
     
-    .buttons button {
-      padding: 6px 12px;
-      border: 1px solid #aaa;
-      border-radius: 4px;
-      cursor: pointer;
-      background: white;
+    .sbjHeader {
+      font-size: 25px;
+      font-weight: bold;
+      opacity: 0.5;
+      padding: 10px 0px 10px 10px;
+      
     }
     
-    .buttons button:hover {
-      background: #ddd;
+    
+    .buttonX {
+      display: grid;
+      place-items: center start;
+      padding-left: 10px;
+      border: 2px solid #E5E5E5;
+      border-radius: 30px;
+      background: #fafafa;
+      height: 40px;
+      margin: 10px 10px 10px 20px;
+      
+      color: #595959;
+    }
+    
+    .buttonX:hover {
+      background: black;
+      color: white;
+      border-color: black;
     }
   </style>
 </head>
@@ -97,9 +119,78 @@
   
   
   
-  <iframe id="viewer" src=""></iframe>
+  <iframe id="viewer" src="/simulations/phet/physics/atomic-interactions_en.html"></iframe>
+  
+  
+  
   
   <div class="buttons" id="btnContainer">
+    
+    
+    <div class="sbjHeader">পদার্থবিজ্ঞান</div>
+    
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/atomic-interactions_en.html'">পরমাণু আন্তঃক্রিয়া</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/balancing-act_en.html'">ভারসাম্য</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/balloons-and-static-electricity_en.html'">বেলুন ও স্থির বিদ্যুৎ</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/bending-light_en.html'">আলোর বিচ্যুতি</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/blackbody-spectrum_en.html'">ব্ল্যাকবডি স্পেকট্রাম</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/build-a-nucleus_en.html'">নিউক্লিয়াস নির্মাণ</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/build-an-atom_en.html'">পরমাণু নির্মাণ</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/buoyancy-basics_en.html'">ভাসমানতা (বেসিক)</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/buoyancy_en.html'">ভাসমানতা</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/calculus-grapher_en.html'">ক্যালকুলাস গ্রাফার</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/capacitor-lab-basics_en.html'">ক্যাপাসিটর ল্যাব (বেসিক)</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/charges-and-fields_en.html'">চার্জ ও ক্ষেত্র</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/circuit-construction-kit-ac-virtual-lab_en.html'">সার্কিট কিট AC (ভার্চুয়াল)</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/circuit-construction-kit-ac_en.html'">সার্কিট কিট AC</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/circuit-construction-kit-dc-virtual-lab_en.html'">সার্কিট কিট DC (ভার্চুয়াল)</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/circuit-construction-kit-dc_en.html'">সার্কিট কিট DC</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/collision-lab_en.html'">সংঘর্ষ ল্যাব</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/color-vision_en.html'">রং দেখার ক্ষমতা</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/coulombs-law_en.html'">কুলম্বের সূত্র</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/density_en.html'">ঘনত্ব</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/diffusion_en.html'">প্রশ্লেষণ (Diffusion)</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/energy-forms-and-changes_en.html'">শক্তির রূপ ও পরিবর্তন</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/energy-skate-park-basics_en.html'">এনার্জি স্কেট পার্ক (বেসিক)</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/energy-skate-park_en.html'">এনার্জি স্কেট পার্ক</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/faradays-electromagnetic-lab_en.html'">ফ্যারাডের ইলেক্ট্রোম্যাগনেটিক ল্যাব</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/faradays-law_en.html'">ফ্যারাডের সূত্র</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/forces-and-motion-basics_en.html'">বল ও গতি (বেসিক)</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/friction_en.html'">ঘর্ষণ</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/gas-properties_en.html'">গ্যাসের ধর্ম</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/gases-intro_en.html'">গ্যাস পরিচিতি</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/generator_en.html'">জেনারেটর</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/geometric-optics-basics_en.html'">জ্যামিতিক অপটিক্স (বেসিক)</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/geometric-optics_en.html'">জ্যামিতিক অপটিক্স</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/gravity-and-orbits_en.html'">মহাকর্ষ ও কক্ষপথ</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/gravity-force-lab-basics_en.html'">মহাকর্ষ বল ল্যাব (বেসিক)</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/hookes-law_en.html'">হুকের সূত্র</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/john-travoltage_en.html'">জন ট্রাভোল্টেজ</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/keplers-laws_en.html'">কেপলারের সূত্র</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/magnet-and-compass_en.html'">চুম্বক ও কম্পাস</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/magnets-and-electromagnets_en.h'">চুম্বক ও ইলেক্ট্রোম্যাগনেট</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/masses-and-springs-basics_en.htr'">ভর ও স্প্রিং (বেসিক)</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/masses-and-springs_en.html'">ভর ও স্প্রিং</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/models-of-the-hydrogen-atom_en.ml'">হাইড্রোজেন পরমাণুর মডেল</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/molecules-and-light_en.html'">মলিকিউল ও আলো</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/my-solar-system_en.html'">আমার সোলার সিস্টেম</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/normal-modes_en.html'">নরমাল মোড</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/ohms-law_en.html'">ওহমের সূত্র</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/pendulum-lab_en.html'">দোলক ল্যাব</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/projectile-data-lab_en.html'">প্রোজেকটাইল ডেটা ল্যাব</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/projectile-motion_en.html'">নিক্ষেপণ গতি</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/resistance-in-a-wire_en.html'">তার-এর রেজিস্ট্যান্স</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/rutherford-scattering en.html'">রাদারফোর্ড স্ক্যাটারিং</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/SOund-waves_en.html'">শব্দ তরঙ্গ</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/states-of-matter-basics_en.html'">দ্রব্যের দশা (বেসিক)</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/states-of-matter_en.html'">দ্রব্যের দশা</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/under-pressure_en.html'">চাপের নিচে</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/vector-addition_en.html'">ভেক্টর যোগ</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/wave-interferenceen.html'">তরঙ্গের হস্তক্ষেপ</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/wave-on-a-string_en.html'">দড়ির উপর তরঙ্গ</div>
+    <div class="buttonX" onclick="document.getElementById('viewer').src='/simulations/phet/physics/waves-intro_en.html'">তরঙ্গ পরিচিতি</div>
+    
+    
     
   </div>
   
@@ -127,81 +218,12 @@
   <script src="main.js" type="module"></script>
   <script src="libraries/supabase/supabase.js" type="module"></script>
   <script src="backend.js" type="module"></script>
-  <script type="text/javascript" charset="utf-8">
-    const files = [
-      "atomic-interactions_en.html",
-      "balancing-act_en.html",
-      "balloons-and-static-electricity.html",
-      "bending-light_en.html",
-      "blackbody-spectrum_en.html",
-      "build-a-nucleus_en.html",
-      "build-an-atom_en.html",
-      "buoyancy-basics _en.html",
-      "buoyancy_en.html",
-      "calculus-grapher_en.html",
-      "capacitor-lab-basics_en.html",
-      "charges-and-fields_en.html",
-      "circuit-construction-kit-ac-virtual-lab_en.html",
-      "circuit-construction-kit-ac_en.html",
-      "circuit-construction-kit-dc-virtual-lab_en.html",
-      "circuit-construction-kit-dc_en.html",
-      "collision-lab_en.html",
-      "color-vision_en.html",
-      "coulombs-law_en.html",
-      "density_en.html",
-      "diffusion_en.html",
-      "energy-forms-and-changes_en.html",
-      "energy-skate-park-basics_en.html",
-      "energy-skate-park_en.html",
-      "faradays-electromagnetic-lab_en.html",
-      "faradays-law_en.html",
-      "forces-and-motion-basics_en.html",
-      "friction_en.html",
-      "gas-properties_en.html",
-      "gases-intro_en.html",
-      "generator_en.html",
-      "geometric-optics-basics_en.html",
-      "geometric-optics_en.html",
-      "gravity-and-orbits_en.html",
-      "gravity-force-lab-basics_en.html",
-      "hookes-law_en.html",
-      "john-travoltage_en.html",
-      "keplers-laws_en.html",
-      "magnet-and-compass_en.html",
-      "magnets-and-electromagnets_en.h",
-      "masses-and-springs-basics_en.htr",
-      "masses-and-springs_en.html",
-      "models-of-the-hydrogen-atom_en.ml",
-      "molecules-and-light_en.html",
-      "my-solar-system_en.html",
-      "normal-modes_en.html",
-      "ohms-law_en.html",
-      "pendulum-lab_en.html",
-      "projectile-data-lab_en.html",
-      "projectile-motion_en.html",
-      "resistance-in-a-wire_en.html",
-      "rutherford-scattering en.html",
-      "SOund-waves_en.html",
-      "states-of-matter-basics_en.html",
-      "states-of-matter_en.html",
-      "under-pressure_en.html",
-      "vector-addition_en.html",
-      "wave-interferenceen.html",
-      "wave-on-a-string_en.html",
-      "waves-intro_en.html"
-    ];
-    
-    const container = document.getElementById('btnContainer');
-    const viewer = document.getElementById('viewer');
-    
-    files.forEach(file => {
-      const btn = document.createElement('button');
-      btn.textContent = file;
-      btn.addEventListener('click', () => {
-        viewer.src = '/simulations/phet/physics/' + file;
-      });
-      container.appendChild(btn);
-    });
+  
+  
+  
+  <script>
+  
+  
   </script>
 </body>
 
